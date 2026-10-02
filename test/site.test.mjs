@@ -94,6 +94,29 @@ test('about page renders an independent responsive portrait, not a gallery photo
   assert.match(renderSite(modified, '/').get('about/index.html'), /src="https:\/\/images.example.com\/media\/profile\/large.webp"/);
 });
 
+test('numbers series oldest to newest, keeping existing numbers when a newer series is added', () => {
+  const content = structuredClone(example);
+  const [oldest, newest, middle] = content.collections;
+  oldest.dateRange = { start: '2026-09-25', end: '2026-09-25' };
+  newest.dateRange = { start: '2026-10-01', end: '2026-10-02' };
+  middle.dateRange = { start: '2026-09-28', end: '2026-09-28' };
+  const numbers = html => new Map([...html.matchAll(/class="series-cover" href="\/photography\/series\/([^/]+)\/".*?class="series-number">(\d+)<\/span>/gs)].map(match => [match[1], match[2]]));
+  const before = renderSite(content).get('index.html');
+  assert.deepEqual([...numbers(before)], [[newest.id, '03'], [middle.id, '02'], [oldest.id, '01']]);
+  assert.match(before, /FEATURED SERIES \/ 03/);
+  assert.match(before.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`data-photo="${newest.cover}"`));
+  const added = structuredClone(oldest);
+  added.id = 'later-series';
+  added.dateRange = { start: '2026-10-03', end: '2026-10-03' };
+  added.photos = added.photos.map(photo => ({ ...photo, id: `later-${photo.id}` }));
+  added.cover = added.photos[0].id;
+  content.collections.push(added);
+  const after = renderSite(content).get('index.html');
+  assert.deepEqual([...numbers(after)], [[added.id, '04'], ...numbers(before)]);
+  assert.match(after, /FEATURED SERIES \/ 04/);
+  assert.match(after.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`data-photo="${added.cover}"`));
+});
+
 test('portrait validation rejects unsafe paths, dimensions and missing local assets', async t => {
   const portrait = { alt: '个人照片', width: 936, height: 839, variants: [{ src: 'media/profile/missing.webp', width: 936 }] };
   for (const mutate of [
