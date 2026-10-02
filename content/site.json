@@ -1,0 +1,20 @@
+{
+  "name": "Xiaogang Su",
+  "nameEn": "XIAOGANG SU",
+  "title": "目光所及",
+  "subtitle": "Photographs, in passing.",
+  "description": "街头、途中与远方。用照片记录遇见的人、空间，以及未曾预料的瞬间。",
+  "about": "我是一名业余摄影师，主要拍摄街头，也记录旅途中的风景。喜欢森山大道与亚力克斯·韦伯的作品，在日常的光影、人群与空间中练习观看。我也是胶片狂热爱好者，最喜欢的胶片是柯达全能 400。",
+  "portrait": {
+    "alt": "Xiaogang Su 手持相机的个人照片",
+    "width": 936,
+    "height": 839,
+    "variants": [
+      { "src": "media/profile/portrait-b0dd5c17e531c48d-480.webp", "width": 480 },
+      { "src": "media/profile/portrait-b0dd5c17e531c48d-936.webp", "width": 936 }
+    ]
+  },
+  "mediaBaseUrl": "",
+  "siteUrl": "https://suxiaogang223.github.io/photography",
+  "blogUrl": "https://suxiaogang223.github.io/"
+}

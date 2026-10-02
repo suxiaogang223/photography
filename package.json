@@ -1,0 +1,16 @@
+{
+  "name": "xiaogang-photography",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs --watch",
+    "build": "node scripts/build.mjs",
+    "preview": "node scripts/serve.mjs",
+    "import": "node scripts/import-photos.mjs",
+    "test": "node --test",
+    "check": "npm test && npm run build"
+  },
+  "devDependencies": { "sharp": "0.35.5" }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "ordinary-light",
+    "title": "寻常的光",
+    "subtitle": "ORDINARY LIGHT",
+    "year": "预览",
+    "description": "街道上的光影与空间。一个转角，一面墙，一次停留。",
+    "cover": "light-01",
+    "photos": [
+      { "id": "light-01", "title": "午后的留白", "alt": "暖色建筑几何占位插画，非摄影作品", "placeholder": true, "width": 1600, "height": 1100, "variants": [{ "src": "placeholders/light.svg", "width": 1600 }] },
+      { "id": "light-02", "title": "转角", "alt": "墙面与阶梯的几何占位插画，非摄影作品", "placeholder": true, "width": 1100, "height": 1400, "variants": [{ "src": "placeholders/wall.svg", "width": 1100 }] }
+    ]
+  },
+  {
+    "id": "between-places",
+    "title": "行走之间",
+    "subtitle": "BETWEEN PLACES",
+    "year": "预览",
+    "description": "从城市走向远方。沿途的景象，没有固定的边界。",
+    "cover": "places-01",
+    "photos": [
+      { "id": "places-01", "title": "远处", "alt": "山形与水面的几何占位插画，非摄影作品", "placeholder": true, "width": 1600, "height": 1100, "variants": [{ "src": "placeholders/land.svg", "width": 1600 }] },
+      { "id": "places-02", "title": "岸边", "alt": "河岸与薄雾的几何占位插画，非摄影作品", "placeholder": true, "width": 1600, "height": 1100, "variants": [{ "src": "placeholders/shore.svg", "width": 1600 }] }
+    ]
+  },
+  {
+    "id": "quiet-moments",
+    "title": "片刻安静",
+    "subtitle": "QUIET MOMENTS",
+    "year": "预览",
+    "description": "人群之外，空间之中。记录那些暂时安静下来的片刻。",
+    "cover": "quiet-01",
+    "photos": [
+      { "id": "quiet-01", "title": "窗前", "alt": "室内光影的几何占位插画，非摄影作品", "placeholder": true, "width": 1100, "height": 1400, "variants": [{ "src": "placeholders/window.svg", "width": 1100 }] },
+      { "id": "quiet-02", "title": "最后一束光", "alt": "夕阳与海平线的几何占位插画，非摄影作品", "placeholder": true, "width": 1600, "height": 1100, "variants": [{ "src": "placeholders/dusk.svg", "width": 1600 }] }
+    ]
+  }
+]
