@@ -160,6 +160,9 @@ test('neutral dark theme keeps all interface colors achromatic and does not filt
   assert.doesNotMatch(css, /(?:^|[;{])filter:/);
   assert.match(css, /\.hero img\{height:100%;object-fit:contain/);
   assert.match(css, /\.series-cover img\{height:100%;object-fit:contain/);
+  assert.match(css, /\.hero \.photo-open\{[^}]*aspect-ratio:3\/2/);
+  assert.match(css, /\.series-cover\{[^}]*aspect-ratio:3\/2/);
+  assert.doesNotMatch(css, /(?:\.hero \.photo-open|\.series-card:nth-child\([^)]*\) \.series-cover)\{aspect-ratio:(?!3\/2)/);
   const page = renderSite(example).get('index.html');
   assert.match(page, /name="theme-color" content="#141414"/);
   assert.match(page, /name="color-scheme" content="dark"/);
