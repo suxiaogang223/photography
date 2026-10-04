@@ -4,6 +4,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
 import { ROOT, args, validId, validateContent } from './lib.mjs';
+import { captureFromExif } from './photo-metadata.mjs';
 
 const supported = new Set(['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.avif']);
 export async function importPhotos({ inputDir, collectionId, title, root = ROOT }) {
@@ -32,6 +33,12 @@ export async function importPhotos({ inputDir, collectionId, title, root = ROOT 
     const hash = createHash('sha256').update(sourceBuffer).digest('hex').slice(0, 16);
     const id = `${collectionId}-${hash}`;
     if (collection.photos.some(photo => photo.id === id) || additions.some(photo => photo.id === id)) { skipped++; continue; }
+    let sourceMetadata;
+    try {
+      sourceMetadata = await sharp(sourceBuffer, { failOn: 'error', limitInputPixels: 100_000_000 }).metadata();
+    } catch (error) { throw new Error(`图片无法处理：${filename}。${error.message}`); }
+    // Scanned film often records the scanner as the camera. Film details are manual per photo.
+    const capture = collection.photos.some(photo => photo.capture?.film) ? null : captureFromExif(sourceMetadata.exif);
     const variants = [];
     let largest;
     // Default Sharp output strips EXIF, XMP and IPTC. Rotate first, normalize color to sRGB.
@@ -56,7 +63,7 @@ export async function importPhotos({ inputDir, collectionId, title, root = ROOT 
       variants.push({ src: `media/${collectionId}/${outputName}`, width: encoded.info.width });
       largest = encoded;
     }
-    additions.push({ id, title: `未命名 ${String(collection.photos.filter(photo => !photo.placeholder).length + additions.length + 1).padStart(2, '0')}`, alt: `${collection.title}系列的一张照片，请补充画面描述`, caption: '', width: largest.info.width, height: largest.info.height, variants });
+    additions.push({ id, title: `未命名 ${String(collection.photos.filter(photo => !photo.placeholder).length + additions.length + 1).padStart(2, '0')}`, alt: `${collection.title}系列的一张照片，请补充画面描述`, caption: '', width: largest.info.width, height: largest.info.height, variants, ...(capture ? { capture } : {}) });
   }
   if (additions.length) {
     collection.photos = [...collection.photos.filter(photo => !photo.placeholder), ...additions];

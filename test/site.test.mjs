@@ -41,6 +41,26 @@ test('renders independent pages, responsive images, and honest placeholder label
 test('live collections and their image files remain valid independently of sample fixtures', async () => {
   const live = await loadContent();
   assert.ok(renderSite(live).has('index.html'));
+  const digital = live.collections.flatMap(collection => collection.photos).filter(photo => photo.capture && !photo.capture.film);
+  assert.ok(digital.length > 0);
+  for (const photo of digital) {
+    if (photo.capture.focalLength) assert.match(photo.capture.focalLength, /^\d+mm$/);
+  }
+});
+
+test('lightbox receives distinct capture details for each photo', () => {
+  const modified = structuredClone(example);
+  modified.collections[0].photos[0].capture = { camera: 'NIKON Z fc', aperture: 'f/5.6', shutter: '1/640 s', iso: '200', dateTime: '2026-10-01T16:29' };
+  modified.collections[0].photos[1].capture = { camera: 'Ricoh Elnica 35', film: 'Kodak UltraMax 400' };
+  const page = renderSite(modified).get('index.html');
+  assert.match(page, /id="lightbox-capture" class="lightbox-capture" role="group" aria-label="照片拍摄参数" hidden/);
+  assert.match(page, /id="lightbox-readout" class="lightbox-readout" hidden/);
+  const runtime = JSON.parse(page.match(/<script id="gallery-data" type="application\/json">(.*?)<\/script>/s)[1]);
+  assert.deepEqual(runtime.photos.find(photo => photo.id === 'light-01').capture, modified.collections[0].photos[0].capture);
+  assert.deepEqual(runtime.photos.find(photo => photo.id === 'light-02').capture, modified.collections[0].photos[1].capture);
+  assert.equal(runtime.photos.find(photo => photo.id === 'places-01').capture, undefined);
+  assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { gps: 'secret' } }] }]));
+  assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { dateTime: 'not a date' } }] }]));
 });
 
 test('sorts series newest first by capture-period start without reordering their photographs', () => {

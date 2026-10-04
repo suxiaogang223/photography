@@ -40,6 +40,15 @@ export function validateContent(site, collections) {
   }
   const ids = new Set();
   const photoIds = new Set();
+  const captureKeys = new Set(['camera', 'lens', 'focalLength', 'aperture', 'shutter', 'iso', 'dateTime', 'film']);
+  const validateCapture = (capture, label) => {
+    if (capture === undefined) return;
+    if (!capture || typeof capture !== 'object' || Array.isArray(capture)) throw new Error(`拍摄参数格式无效：${label}`);
+    for (const [key, value] of Object.entries(capture)) {
+      if (!captureKeys.has(key) || typeof value !== 'string' || !value.trim() || value.length > 120) throw new Error(`拍摄参数无效：${label}.${key}`);
+      if (key === 'dateTime' && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value)) throw new Error(`拍摄时间无效：${label}`);
+    }
+  };
   for (const collection of collections) {
     if (!validId(collection.id) || ids.has(collection.id)) throw new Error(`系列 ID 无效或重复：${collection.id}`);
     ids.add(collection.id);
@@ -47,6 +56,7 @@ export function validateContent(site, collections) {
     for (const photo of collection.photos) {
       if (!validId(photo.id) || photoIds.has(photo.id)) throw new Error(`照片 ID 无效或重复：${photo.id}`);
       photoIds.add(photo.id);
+      validateCapture(photo.capture, photo.id);
       if (!photo.alt?.trim() || !photo.title?.trim()) throw new Error(`照片需要标题和替代文字：${photo.id}`);
       if (![photo.width, photo.height].every(value => Number.isInteger(value) && value > 0)) throw new Error(`照片尺寸无效：${photo.id}`);
       if (!Array.isArray(photo.variants) || !photo.variants.length) throw new Error(`照片需要图片版本：${photo.id}`);
