@@ -17,3 +17,16 @@ main{overflow:hidden}.intro{width:86%;max-width:1530px;margin:76px auto 56px;dis
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
 .lightbox-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;row-gap:14px}.lightbox-bottom>div:first-child{min-width:0}.lightbox-capture{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:24px;padding-top:14px;border-top:1px solid #303030}.lightbox-capture.single-column{grid-template-columns:1fr}.lightbox-equipment,.lightbox-readout{min-width:0;display:flex;flex-direction:column;gap:5px;font-family:var(--mono);line-height:1.5}.lightbox-equipment strong{font-size:12px;font-weight:600;letter-spacing:.02em}.lightbox-equipment span{font-size:10px;color:#a3a3a3;overflow-wrap:anywhere}.lightbox-readout{border-left:1px solid #4a4a4a;padding-left:24px;text-align:right;align-items:flex-end}.lightbox-bottom .lightbox-readout p{font-family:var(--mono);font-size:11px;font-weight:600;color:#dddddd;line-height:1.5;margin:0;max-width:none}.lightbox-readout time{font-size:10px;color:#a3a3a3}
 @media(max-width:700px){.lightbox-bottom{row-gap:10px}.lightbox-capture{grid-template-columns:1fr;gap:9px;padding-top:10px}.lightbox-equipment,.lightbox-readout{gap:3px}.lightbox-equipment strong{font-size:11px}.lightbox-equipment span{font-size:9px}.lightbox-readout{border-left:0;padding-left:0;text-align:left;align-items:flex-start}.lightbox-bottom .lightbox-readout p{font-size:10px}.lightbox-readout time{font-size:9px}}
+
+/* The film stock sits outside the complete image; no gallery frame masks pixels. */
+.photo-open.film-frame,.lightbox-image-wrap.film-view img{background-color:#101010;background-image:radial-gradient(ellipse 4px 3px at center,#666666 72%,transparent 78%),radial-gradient(ellipse 4px 3px at center,#666666 72%,transparent 78%);background-size:22px 9px;background-position:left 5px top 5px,left 5px bottom 5px;background-repeat:repeat-x;box-shadow:0 10px 30px #0007;border:1px solid #393939}
+.photo-open.film-frame{padding:18px 11px}
+.photo-open.film-frame img{object-fit:contain;background:#080808}
+.contact-photo .photo-open.film-frame{aspect-ratio:auto}
+.contact-photo .photo-open.film-frame img{height:auto}
+.collection-photo .photo-open.film-frame{background-color:#101010}
+.lightbox-image-wrap.film-view img{width:auto;height:auto;max-width:100%;max-height:100%;padding:18px 11px;object-fit:contain}
+.lightbox-image-wrap.film-view.zoomed img{max-width:none;max-height:none}
+@media(max-width:700px){.photo-open.film-frame,.lightbox-image-wrap.film-view img{padding:12px 7px;background-size:17px 7px;background-position:left 4px top 3px,left 4px bottom 3px}}
+.photo-open.film-frame.film-portrait,.lightbox-image-wrap.film-view.film-portrait img{padding:11px 18px;background-size:9px 22px;background-position:left 5px top 5px,right 5px top 5px;background-repeat:repeat-y}
+@media(max-width:700px){.photo-open.film-frame.film-portrait,.lightbox-image-wrap.film-view.film-portrait img{padding:7px 12px;background-size:7px 17px;background-position:left 3px top 4px,right 3px top 4px}}

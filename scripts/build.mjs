@@ -11,7 +11,7 @@ export function renderSite({ site, collections }, base = '/photography/') {
   const active = collections.filter(collection => collection.photos.length).sort((left, right) =>
     seriesDate(right).localeCompare(seriesDate(left))
     || (right.dateRange?.end || '').localeCompare(left.dateRange?.end || ''));
-  const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year })));
+  const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year, medium: collection.medium || 'digital' })));
   const published = photos.filter(photo => !photo.placeholder);
   const demo = photos.some(photo => photo.placeholder);
   const count = number => String(number).padStart(2, '0');
@@ -32,7 +32,7 @@ export function renderSite({ site, collections }, base = '/photography/') {
     return `<img src="${e(mediaUrl(initial.src, site, base))}" srcset="${variants.map(variant => `${e(mediaUrl(variant.src, site, base))} ${variant.width}w`).join(', ')}" sizes="${sizes}" width="${photo.width}" height="${photo.height}" alt="${e(photo.alt)}" loading="${eager ? 'eager' : 'lazy'}" ${eager ? 'fetchpriority="high"' : ''} decoding="async">`;
   };
   const badge = photo => photo.placeholder ? '<span class="sample-badge">布局示意 · 非摄影作品</span>' : '';
-  const photoButton = (photo, options) => `<button class="photo-open" data-photo="${e(photo.id)}" aria-label="查看${e(photo.title)}">${image(photo, options)}${badge(photo)}<span class="photo-expand" aria-hidden="true">↗</span></button>`;
+  const photoButton = (photo, options) => `<button class="photo-open${photo.medium === 'film' ? ` film-frame${photo.height > photo.width ? ' film-portrait' : ''}` : ''}" data-photo="${e(photo.id)}" aria-label="查看${e(photo.title)}">${image(photo, options)}${badge(photo)}<span class="photo-expand" aria-hidden="true">↗</span></button>`;
   const totalLabel = demo && !published.length ? `${count(photos.length)} 幅布局示意` : `${count(published.length)} 张作品`;
   const firstCollection = active[0];
   const hero = firstCollection?.photos.find(photo => photo.id === firstCollection.cover);

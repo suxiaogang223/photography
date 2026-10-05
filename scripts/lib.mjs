@@ -53,6 +53,7 @@ export function validateContent(site, collections) {
     if (!validId(collection.id) || ids.has(collection.id)) throw new Error(`系列 ID 无效或重复：${collection.id}`);
     ids.add(collection.id);
     if (!collection.title || !Array.isArray(collection.photos)) throw new Error(`系列缺少标题或照片：${collection.id}`);
+    if (collection.medium !== undefined && !['film', 'digital'].includes(collection.medium)) throw new Error(`系列媒介无效：${collection.id}`);
     for (const photo of collection.photos) {
       if (!validId(photo.id) || photoIds.has(photo.id)) throw new Error(`照片 ID 无效或重复：${photo.id}`);
       photoIds.add(photo.id);

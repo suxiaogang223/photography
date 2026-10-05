@@ -34,6 +34,8 @@ function showPhoto() {
   image.src = photo.variants.at(-1).src;
   image.width = photo.width;
   image.height = photo.height;
+  imageWrap.classList.toggle('film-view', photo.medium === 'film');
+  imageWrap.classList.toggle('film-portrait', photo.medium === 'film' && photo.height > photo.width);
   document.querySelector('#lightbox-title').textContent = photo.title;
   document.querySelector('#lightbox-caption').textContent = photo.placeholder ? '布局示意插画 · 非摄影作品' : photo.caption || '';
   const capture = photo.capture || {};

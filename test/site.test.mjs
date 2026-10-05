@@ -305,6 +305,31 @@ test('new series and small source avoid upscaling or duplicate width variants', 
   assert.match(renderSite(content).get('series/new-series/index.html'), /新系列/);
 });
 
+test('film import retains portrait orientation without cropping or changing sources', async t => {
+  const root = await workspace(t);
+  const inputDir = path.join(root, 'incoming');
+  await mkdir(inputDir);
+  const source = await sharp({ create: { width: 200, height: 300, channels: 3, background: '#778d6b' } }).png().toBuffer();
+  await writeFile(path.join(inputDir, 'portrait.png'), source);
+  const exifPortrait = await sharp({ create: { width: 300, height: 200, channels: 3, background: '#778d6b' } })
+    .withMetadata({ orientation: 6 }).jpeg().toBuffer();
+  await writeFile(path.join(inputDir, 'portrait-exif.jpg'), exifPortrait);
+  await importPhotos({ inputDir, collectionId: 'film-roll', title: '胶片', medium: 'film', root });
+  const content = await loadContent(root);
+  const collection = content.collections.at(-1);
+  const photo = collection.photos[0];
+  assert.equal(collection.medium, 'film');
+  assert.equal(collection.photos.length, 2);
+  assert.ok(collection.photos.every(item => item.width === 200 && item.height === 300));
+  assert.equal(photo.capture, undefined, 'scanner EXIF must not become capture details');
+  assert.deepEqual(await readFile(path.join(inputDir, 'portrait.png')), source);
+  assert.deepEqual(await readFile(path.join(inputDir, 'portrait-exif.jpg')), exifPortrait);
+  const info = await sharp(path.join(root, 'assets', photo.variants[0].src)).metadata();
+  assert.deepEqual([info.width, info.height], [200, 300]);
+  assert.match(renderSite(content).get('series/film-roll/index.html'), /class="photo-open film-frame film-portrait"/);
+  await assert.rejects(importPhotos({ inputDir, collectionId: 'film-roll', medium: 'digital', root }), /媒介与导入参数不一致/);
+});
+
 test('identical files within one import batch are deduplicated', async t => {
   const root = await workspace(t);
   const inputDir = path.join(root, 'incoming');
