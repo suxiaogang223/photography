@@ -19,9 +19,27 @@ let touchStart = null;
 
 function resetZoom() {
   imageWrap.classList.remove('zoomed');
+  image.style.removeProperty('--actual-pixel-width');
+  image.style.removeProperty('--actual-pixel-height');
   fit.setAttribute('aria-pressed', 'false');
   fit.textContent = '实际大小';
   imageWrap.scrollTo(0, 0);
+}
+
+function setActualPixelSize() {
+  const width = image.naturalWidth || Number(image.getAttribute('width'));
+  const height = image.naturalHeight || Number(image.getAttribute('height'));
+  const pixelRatio = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1;
+  if (!width || !height) return;
+  image.style.setProperty('--actual-pixel-width', `${width / pixelRatio}px`);
+  image.style.setProperty('--actual-pixel-height', `${height / pixelRatio}px`);
+}
+
+function centerActualPixels() {
+  imageWrap.scrollTo(
+    (imageWrap.scrollWidth - imageWrap.clientWidth) / 2,
+    (imageWrap.scrollHeight - imageWrap.clientHeight) / 2,
+  );
 }
 
 function showPhoto() {
@@ -99,8 +117,24 @@ dialog.addEventListener('keydown', event => {
 });
 fit.addEventListener('click', () => {
   const zoomed = imageWrap.classList.toggle('zoomed');
+  if (zoomed) {
+    setActualPixelSize();
+    centerActualPixels();
+  } else imageWrap.scrollTo(0, 0);
   fit.setAttribute('aria-pressed', String(zoomed));
   fit.textContent = zoomed ? '适应屏幕' : '实际大小';
+});
+image.addEventListener('load', () => {
+  if (imageWrap.classList.contains('zoomed')) {
+    setActualPixelSize();
+    centerActualPixels();
+  }
+});
+window.addEventListener('resize', () => {
+  if (imageWrap.classList.contains('zoomed')) {
+    setActualPixelSize();
+    centerActualPixels();
+  }
 });
 image.addEventListener('error', () => { error.hidden = false; });
 imageWrap.addEventListener('touchstart', event => {

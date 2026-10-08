@@ -30,3 +30,5 @@ main{overflow:hidden}.intro{width:86%;max-width:1530px;margin:76px auto 56px;dis
 @media(max-width:700px){.photo-open.film-frame,.lightbox-image-wrap.film-view img{padding:12px 7px;background-size:17px 7px;background-position:left 4px top 3px,left 4px bottom 3px}}
 .photo-open.film-frame.film-portrait,.lightbox-image-wrap.film-view.film-portrait img{padding:11px 18px;background-size:9px 22px;background-position:left 5px top 5px,right 5px top 5px;background-repeat:repeat-y}
 @media(max-width:700px){.photo-open.film-frame.film-portrait,.lightbox-image-wrap.film-view.film-portrait img{padding:7px 12px;background-size:7px 17px;background-position:left 3px top 4px,right 3px top 4px}}
+/* The bitmap's CSS size is its loaded pixel size divided by devicePixelRatio. Film padding stays outside those pixels. */
+.lightbox-image-wrap.zoomed img{width:var(--actual-pixel-width);height:var(--actual-pixel-height);box-sizing:content-box}
