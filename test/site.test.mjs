@@ -101,7 +101,9 @@ test('sorts series newest first by capture-period start without reordering their
     assert.deepEqual(runtime.photos.filter(photo => photo.collection === collection.id).map(photo => photo.id), collection.photos.map(photo => photo.id));
   }
   const hero = home.match(/<section class="hero".*?<\/section>/s)[0];
-  assert.match(hero, new RegExp(`data-photo="${content.collections[1].cover}"`));
+  assert.match(hero, /<a class="photo-open" href="\/photography\/series\/between-places\/" aria-label="浏览.*系列"><img /);
+  assert.doesNotMatch(hero, /data-photo=/);
+  assert.match(pages.get('series/between-places/index.html'), /<button class="photo-open" data-photo=/);
   const cards = [...home.matchAll(/class="series-cover" href="\/photography\/series\/([^/]+)\//g)].map(match => match[1]);
   assert.deepEqual(cards, runtime.collections.map(collection => collection.id));
   const filters = [...pages.get('index/index.html').matchAll(/data-filter="([^"]+)"/g)].map(match => match[1]);
@@ -142,7 +144,7 @@ test('numbers series oldest to newest, keeping existing numbers when a newer ser
   const before = renderSite(content).get('index.html');
   assert.deepEqual([...numbers(before)], [[newest.id, '03'], [middle.id, '02'], [oldest.id, '01']]);
   assert.match(before, /FEATURED SERIES \/ 03/);
-  assert.match(before.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`data-photo="${newest.cover}"`));
+  assert.match(before.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`class="photo-open" href="/photography/series/${newest.id}/"`));
   const added = structuredClone(oldest);
   added.id = 'later-series';
   added.dateRange = { start: '2026-10-03', end: '2026-10-03' };
@@ -152,7 +154,7 @@ test('numbers series oldest to newest, keeping existing numbers when a newer ser
   const after = renderSite(content).get('index.html');
   assert.deepEqual([...numbers(after)], [[added.id, '04'], ...numbers(before)]);
   assert.match(after, /FEATURED SERIES \/ 04/);
-  assert.match(after.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`data-photo="${added.cover}"`));
+  assert.match(after.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`class="photo-open" href="/photography/series/${added.id}/"`));
 });
 
 test('undated Others series remains last and uses 00 without shifting dated numbers', () => {
