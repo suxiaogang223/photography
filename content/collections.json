@@ -5213,5 +5213,256 @@
       "end": "2026-10-11",
       "source": "拍摄者提供"
     }
+  },
+  {
+    "id": "bikini-bottom",
+    "title": "比奇堡",
+    "subtitle": "BIKINI BOTTOM",
+    "year": "",
+    "medium": "film",
+    "category": "胶片纪行",
+    "description": "走进人群中的比奇堡：卡通布景、游乐摊位和来往的人们，让城市的一个午后有了不同的表情。",
+    "cover": "bikini-bottom-fd65db9292a1b0aa",
+    "photos": [
+      {
+        "id": "bikini-bottom-fd65db9292a1b0aa",
+        "title": "比奇堡 · 01",
+        "alt": "草坡上的章鱼哥布景，前景有奔跑的孩子和拍照的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-fd65db9292a1b0aa-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-fd65db9292a1b0aa-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-fd65db9292a1b0aa-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-0da1ed59ca2b6203",
+        "title": "比奇堡 · 02",
+        "alt": "卡通角色围着小桌，游客在布景间穿行",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-0da1ed59ca2b6203-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-0da1ed59ca2b6203-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-0da1ed59ca2b6203-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-23e70cb55e03ada7",
+        "title": "比奇堡 · 03",
+        "alt": "写有 HAPPY FUN 的彩绘墙前聚集的人群",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-23e70cb55e03ada7-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-23e70cb55e03ada7-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-23e70cb55e03ada7-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-a610f898c996c924",
+        "title": "比奇堡 · 04",
+        "alt": "男子站在章鱼哥雕像旁合影",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-a610f898c996c924-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-a610f898c996c924-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-a610f898c996c924-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-605dba560fd9728a",
+        "title": "比奇堡 · 05",
+        "alt": "海绵宝宝与派大星的巨型雕像",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-605dba560fd9728a-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-605dba560fd9728a-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-605dba560fd9728a-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-f252049efd6128a4",
+        "title": "比奇堡 · 06",
+        "alt": "举起手的黄色卡通雕像立在天空前",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-f252049efd6128a4-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-f252049efd6128a4-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-f252049efd6128a4-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-f727c6934ea5ac25",
+        "title": "比奇堡 · 07",
+        "alt": "黄色花丛后的一组卡通主题布景",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-f727c6934ea5ac25-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-f727c6934ea5ac25-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-f727c6934ea5ac25-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-319376ccc78c2f24",
+        "title": "比奇堡 · 08",
+        "alt": "摊位前的父亲抱着孩子，游客在旁边排队",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-319376ccc78c2f24-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-319376ccc78c2f24-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-319376ccc78c2f24-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      },
+      {
+        "id": "bikini-bottom-2d442026aeefc302",
+        "title": "比奇堡 · 09",
+        "alt": "从台阶上方俯瞰热闹的主题广场",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/bikini-bottom/bikini-bottom-2d442026aeefc302-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-2d442026aeefc302-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/bikini-bottom/bikini-bottom-2d442026aeefc302-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "FUJICOLOR C200"
+        }
+      }
+    ],
+    "dateRange": {
+      "start": "2026-10-11",
+      "end": "2026-10-11",
+      "source": "拍摄者提供"
+    }
   }
 ]
