@@ -4786,60 +4786,8 @@
     "cover": "dongjiao-memory-80c72c8774bd8fa5",
     "photos": [
       {
-        "id": "dongjiao-memory-3580986b93db12a9",
-        "title": "东郊记忆 · 01",
-        "alt": "熊猫雕像旁坐在长椅上的女子",
-        "caption": "",
-        "width": 3000,
-        "height": 1989,
-        "variants": [
-          {
-            "src": "media/dongjiao-memory/dongjiao-memory-3580986b93db12a9-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/dongjiao-memory/dongjiao-memory-3580986b93db12a9-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/dongjiao-memory/dongjiao-memory-3580986b93db12a9-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Olympus OM-2N",
-          "film": "乐凯影者100"
-        }
-      },
-      {
-        "id": "dongjiao-memory-692aeab26de3c6eb",
-        "title": "东郊记忆 · 02",
-        "alt": "竖幅画面中矗立的旧工业储罐",
-        "caption": "",
-        "width": 1989,
-        "height": 3000,
-        "variants": [
-          {
-            "src": "media/dongjiao-memory/dongjiao-memory-692aeab26de3c6eb-thumb.webp",
-            "width": 424
-          },
-          {
-            "src": "media/dongjiao-memory/dongjiao-memory-692aeab26de3c6eb-display.webp",
-            "width": 1061
-          },
-          {
-            "src": "media/dongjiao-memory/dongjiao-memory-692aeab26de3c6eb-large.webp",
-            "width": 1989
-          }
-        ],
-        "capture": {
-          "camera": "Olympus OM-2N",
-          "film": "乐凯影者100"
-        }
-      },
-      {
         "id": "dongjiao-memory-d822d6ba27435a7c",
-        "title": "东郊记忆 · 03",
+        "title": "东郊记忆 · 01",
         "alt": "脚手架的线条交错，远处有人走过",
         "caption": "",
         "width": 3000,
@@ -4865,7 +4813,7 @@
       },
       {
         "id": "dongjiao-memory-80a002ae7318c68b",
-        "title": "东郊记忆 · 04",
+        "title": "东郊记忆 · 02",
         "alt": "旧厂房与两根高烟囱的彩色画面",
         "caption": "",
         "width": 3000,
@@ -4891,7 +4839,7 @@
       },
       {
         "id": "dongjiao-memory-b16cfdd9a96c7322",
-        "title": "东郊记忆 · 05",
+        "title": "东郊记忆 · 03",
         "alt": "旧厂房的一面双开铁门",
         "caption": "",
         "width": 3000,
@@ -4917,7 +4865,7 @@
       },
       {
         "id": "dongjiao-memory-ef8947f5720779bf",
-        "title": "东郊记忆 · 06",
+        "title": "东郊记忆 · 04",
         "alt": "飞机模型下方行走的人们",
         "caption": "",
         "width": 3000,
@@ -4943,7 +4891,7 @@
       },
       {
         "id": "dongjiao-memory-80c72c8774bd8fa5",
-        "title": "东郊记忆 · 07",
+        "title": "东郊记忆 · 05",
         "alt": "涂鸦墙和旧机器前走过的孩子",
         "caption": "",
         "width": 3000,
@@ -4969,7 +4917,7 @@
       },
       {
         "id": "dongjiao-memory-9020b8c1e80c1726",
-        "title": "东郊记忆 · 08",
+        "title": "东郊记忆 · 06",
         "alt": "旧机器设备陈列在台阶后的厂房里",
         "caption": "",
         "width": 3000,
@@ -4986,6 +4934,58 @@
           {
             "src": "media/dongjiao-memory/dongjiao-memory-9020b8c1e80c1726-large.webp",
             "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯影者100"
+        }
+      },
+      {
+        "id": "dongjiao-memory-3580986b93db12a9",
+        "title": "东郊记忆 · 07",
+        "alt": "熊猫雕像旁坐在长椅上的女子",
+        "caption": "",
+        "width": 3000,
+        "height": 1989,
+        "variants": [
+          {
+            "src": "media/dongjiao-memory/dongjiao-memory-3580986b93db12a9-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/dongjiao-memory/dongjiao-memory-3580986b93db12a9-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/dongjiao-memory/dongjiao-memory-3580986b93db12a9-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯影者100"
+        }
+      },
+      {
+        "id": "dongjiao-memory-692aeab26de3c6eb",
+        "title": "东郊记忆 · 08",
+        "alt": "竖幅画面中矗立的旧工业储罐",
+        "caption": "",
+        "width": 1989,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/dongjiao-memory/dongjiao-memory-692aeab26de3c6eb-thumb.webp",
+            "width": 424
+          },
+          {
+            "src": "media/dongjiao-memory/dongjiao-memory-692aeab26de3c6eb-display.webp",
+            "width": 1061
+          },
+          {
+            "src": "media/dongjiao-memory/dongjiao-memory-692aeab26de3c6eb-large.webp",
+            "width": 1989
           }
         ],
         "capture": {
