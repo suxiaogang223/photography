@@ -155,6 +155,29 @@ test('numbers series oldest to newest, keeping existing numbers when a newer ser
   assert.match(after.match(/<section class="hero".*?<\/section>/s)[0], new RegExp(`data-photo="${added.cover}"`));
 });
 
+test('undated Others series remains last and uses 00 without shifting dated numbers', () => {
+  const content = structuredClone(example);
+  const [oldest, newest, middle] = content.collections;
+  oldest.dateRange = { start: '2026-09-25', end: '2026-09-25' };
+  newest.dateRange = { start: '2026-10-01', end: '2026-10-02' };
+  middle.dateRange = { start: '2026-09-28', end: '2026-09-28' };
+  const others = structuredClone(oldest);
+  others.id = 'memory-fragments';
+  others.kind = 'others';
+  others.title = '记忆碎片';
+  others.photos = others.photos.map(photo => ({ ...photo, id: `memory-${photo.id}` }));
+  others.cover = others.photos[0].id;
+  delete others.dateRange;
+  content.collections.push(others);
+  validateContent(content.site, content.collections);
+  const home = renderSite(content).get('index.html');
+  const numbers = [...home.matchAll(/class="series-cover" href="\/photography\/series\/([^/]+)\/".*?class="series-number">(\d+)<\/span>/gs)].map(match => [match[1], match[2]]);
+  assert.deepEqual(numbers, [[newest.id, '03'], [middle.id, '02'], [oldest.id, '01'], [others.id, '00']]);
+  assert.doesNotMatch(renderSite(content).get('series/memory-fragments/index.html'), /class="series-date"/);
+  others.dateRange = { start: '2026-10-01', end: '2026-10-01' };
+  assert.throws(() => validateContent(content.site, content.collections), /不应设置拍摄日期/);
+});
+
 test('portrait validation rejects unsafe paths, dimensions and missing local assets', async t => {
   const portrait = { alt: '个人照片', width: 936, height: 839, variants: [{ src: 'media/profile/missing.webp', width: 936 }] };
   for (const mutate of [

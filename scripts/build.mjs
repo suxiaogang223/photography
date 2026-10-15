@@ -9,14 +9,17 @@ export function renderSite({ site, collections }, base = '/photography/') {
   // copy leaves both the manifest and each series' photo sequence untouched.
   const seriesDate = collection => collection.dateRange?.start || collection.dateRange?.end || '';
   const active = collections.filter(collection => collection.photos.length).sort((left, right) =>
-    seriesDate(right).localeCompare(seriesDate(left))
+    Number(left.kind === 'others') - Number(right.kind === 'others')
+    || seriesDate(right).localeCompare(seriesDate(left))
     || (right.dateRange?.end || '').localeCompare(left.dateRange?.end || ''));
   const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year, medium: photo.medium || collection.medium || 'digital' })));
   const published = photos.filter(photo => !photo.placeholder);
   const demo = photos.some(photo => photo.placeholder);
   const count = number => String(number).padStart(2, '0');
-  // Number series oldest-to-newest while displaying and featuring newest first.
-  const seriesNumbers = new Map(active.map((collection, index) => [collection.id, count(active.length - index)]));
+  // The undated Others shelf is always 00 and never renumbers dated series.
+  const numbered = active.filter(collection => collection.kind !== 'others');
+  const seriesNumbers = new Map(active.map(collection => [collection.id, collection.kind === 'others'
+    ? '00' : count(numbered.length - numbered.indexOf(collection))]));
   const collectionLabel = collection => collection.category || collection.year || '';
   const collectionDates = collection => {
     const range = collection.dateRange;

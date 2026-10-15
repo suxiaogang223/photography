@@ -40,6 +40,7 @@ export function validateContent(site, collections) {
   }
   const ids = new Set();
   const photoIds = new Set();
+  let othersCount = 0;
   const captureKeys = new Set(['camera', 'lens', 'focalLength', 'aperture', 'shutter', 'iso', 'dateTime', 'film']);
   const validateCapture = (capture, label) => {
     if (capture === undefined) return;
@@ -53,6 +54,11 @@ export function validateContent(site, collections) {
     if (!validId(collection.id) || ids.has(collection.id)) throw new Error(`系列 ID 无效或重复：${collection.id}`);
     ids.add(collection.id);
     if (!collection.title || !Array.isArray(collection.photos)) throw new Error(`系列缺少标题或照片：${collection.id}`);
+    if (collection.kind !== undefined && collection.kind !== 'others') throw new Error(`系列类型无效：${collection.id}`);
+    if (collection.kind === 'others') {
+      if (++othersCount > 1) throw new Error('只能有一个 Others 系列。');
+      if (collection.dateRange) throw new Error('Others 系列不应设置拍摄日期。');
+    }
     if (collection.medium !== undefined && !['film', 'digital'].includes(collection.medium)) throw new Error(`系列媒介无效：${collection.id}`);
     for (const photo of collection.photos) {
       if (!validId(photo.id) || photoIds.has(photo.id)) throw new Error(`照片 ID 无效或重复：${photo.id}`);
