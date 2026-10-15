@@ -11,7 +11,7 @@ export function renderSite({ site, collections }, base = '/photography/') {
   const active = collections.filter(collection => collection.photos.length).sort((left, right) =>
     seriesDate(right).localeCompare(seriesDate(left))
     || (right.dateRange?.end || '').localeCompare(left.dateRange?.end || ''));
-  const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year, medium: collection.medium || 'digital' })));
+  const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year, medium: photo.medium || collection.medium || 'digital' })));
   const published = photos.filter(photo => !photo.placeholder);
   const demo = photos.some(photo => photo.placeholder);
   const count = number => String(number).padStart(2, '0');

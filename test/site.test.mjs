@@ -63,6 +63,24 @@ test('lightbox receives distinct capture details for each photo', () => {
   assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { dateTime: 'not a date' } }] }]));
 });
 
+test('a digital photo inside a film series keeps its own medium and no film frame', () => {
+  const content = structuredClone(example);
+  const collection = content.collections[0];
+  collection.medium = 'film';
+  collection.photos[0].capture = { camera: 'Olympus OM-2N', film: 'FUJICOLOR C200' };
+  collection.photos[1].medium = 'digital';
+  collection.photos[1].capture = { camera: 'iPhone 17', focalLength: '26mm' };
+  validateContent(content.site, content.collections);
+  const page = renderSite(content).get(`series/${collection.id}/index.html`);
+  assert.match(page, new RegExp(`class="photo-open film-frame" data-photo="${collection.photos[0].id}"`));
+  assert.match(page, new RegExp(`class="photo-open" data-photo="${collection.photos[1].id}"`));
+  const runtime = JSON.parse(page.match(/<script id="gallery-data" type="application\/json">(.*?)<\/script>/s)[1]);
+  assert.equal(runtime.photos.find(photo => photo.id === collection.photos[0].id).medium, 'film');
+  assert.equal(runtime.photos.find(photo => photo.id === collection.photos[1].id).medium, 'digital');
+  collection.photos[1].medium = 'phone';
+  assert.throws(() => validateContent(content.site, content.collections), /照片媒介无效/);
+});
+
 test('sorts series newest first by capture-period start without reordering their photographs', () => {
   const content = structuredClone(example);
   content.collections[0].dateRange = { start: '2026-09-25', end: '2026-09-25', source: 'EXIF DateTimeOriginal' };

@@ -57,6 +57,7 @@ export function validateContent(site, collections) {
     for (const photo of collection.photos) {
       if (!validId(photo.id) || photoIds.has(photo.id)) throw new Error(`照片 ID 无效或重复：${photo.id}`);
       photoIds.add(photo.id);
+      if (photo.medium !== undefined && !['film', 'digital'].includes(photo.medium)) throw new Error(`照片媒介无效：${photo.id}`);
       validateCapture(photo.capture, photo.id);
       if (!photo.alt?.trim() || !photo.title?.trim()) throw new Error(`照片需要标题和替代文字：${photo.id}`);
       if (![photo.width, photo.height].every(value => Number.isInteger(value) && value > 0)) throw new Error(`照片尺寸无效：${photo.id}`);
