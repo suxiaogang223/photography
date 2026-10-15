@@ -4297,7 +4297,7 @@
     "year": "",
     "medium": "film",
     "category": "胶片纪行",
-    "description": "从街边的楼房走到海边的沙滩，晴朗的青岛被留在一卷胶片里。",
+    "description": "从街边楼房走到海边岸线，彩色与黑白胶片记录同一趟青岛。",
     "cover": "qingdao-film-3a2a261e61fa6ff2",
     "photos": [
       {
@@ -4305,7 +4305,10 @@
         "title": "青岛胶片 · 01",
         "alt": "退潮的沙滩与远处高楼，浅水中有零散的行人",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4328,7 +4331,10 @@
         "title": "青岛胶片 · 02",
         "alt": "一名男子站在海边看着沙滩上的孩子，远处游人散布在海岸",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4351,7 +4357,10 @@
         "title": "青岛胶片 · 03",
         "alt": "蓝天下并立的两幢白色高楼",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4374,7 +4383,10 @@
         "title": "青岛胶片 · 04",
         "alt": "阳光下沙地上摄影者的影子",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4397,7 +4409,10 @@
         "title": "青岛胶片 · 05",
         "alt": "竖幅画面中蓝天下的白色圆顶高楼",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 2007,
         "height": 3000,
         "variants": [
@@ -4420,7 +4435,10 @@
         "title": "青岛胶片 · 06",
         "alt": "蓝天下的电线杆与斜穿画面的电线",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4443,7 +4461,10 @@
         "title": "青岛胶片 · 07",
         "alt": "草棚小屋的窗前与栏杆上的红色花丛",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4466,7 +4487,10 @@
         "title": "青岛胶片 · 08",
         "alt": "沙滩上的树木支架，远处是海边游人",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4489,7 +4513,10 @@
         "title": "青岛胶片 · 09",
         "alt": "手持相机走在退潮沙滩上的男子",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4512,7 +4539,10 @@
         "title": "青岛胶片 · 10",
         "alt": "白衣男子站在海边拍摄，远处是圆顶高楼",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4535,7 +4565,10 @@
         "title": "青岛胶片 · 11",
         "alt": "礁石滩上散布的人群与远处海面",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4558,7 +4591,10 @@
         "title": "青岛胶片 · 12",
         "alt": "沙滩近处坐着的两人，与远处山坡上的亭子",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4581,7 +4617,10 @@
         "title": "青岛胶片 · 13",
         "alt": "两名行人从沙滩浅水处走过，身后是海岸和山坡",
         "caption": "",
-        "capture": { "camera": "Ricoh Elnica 35", "film": "Kodak UltraMax 400" },
+        "capture": {
+          "camera": "Ricoh Elnica 35",
+          "film": "Kodak UltraMax 400"
+        },
         "width": 3000,
         "height": 2007,
         "variants": [
@@ -4595,6 +4634,121 @@
           },
           {
             "src": "media/qingdao-film/qingdao-film-f0a0f40cc9f01ea5-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "qingdao-film-dc953bbce78fb99a",
+        "title": "青岛胶片 · 14",
+        "alt": "海边护栏后的一辆环卫车，远处是海面与城市岸线",
+        "caption": "",
+        "capture": { "camera": "Ricoh Elnica 35", "film": "乐凯影武者 100" },
+        "width": 3000,
+        "height": 1989,
+        "variants": [
+          {
+            "src": "media/qingdao-film/qingdao-film-dc953bbce78fb99a-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-dc953bbce78fb99a-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-dc953bbce78fb99a-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "qingdao-film-86e179e6cd9eec62",
+        "title": "青岛胶片 · 15",
+        "alt": "两名行人倚着海边护栏，望向对岸的城市",
+        "caption": "",
+        "capture": { "camera": "Ricoh Elnica 35", "film": "乐凯影武者 100" },
+        "width": 3000,
+        "height": 1989,
+        "variants": [
+          {
+            "src": "media/qingdao-film/qingdao-film-86e179e6cd9eec62-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-86e179e6cd9eec62-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-86e179e6cd9eec62-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "qingdao-film-03485e8969dc1715",
+        "title": "青岛胶片 · 16",
+        "alt": "一名行人独自走在闪光的浅海中",
+        "caption": "",
+        "capture": { "camera": "Ricoh Elnica 35", "film": "乐凯影武者 100" },
+        "width": 3000,
+        "height": 1990,
+        "variants": [
+          {
+            "src": "media/qingdao-film/qingdao-film-03485e8969dc1715-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-03485e8969dc1715-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-03485e8969dc1715-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "qingdao-film-5a265e05aa00098c",
+        "title": "青岛胶片 · 17",
+        "alt": "从海边台阶俯瞰礁石与水中的一名行人",
+        "caption": "",
+        "capture": { "camera": "Ricoh Elnica 35", "film": "乐凯影武者 100" },
+        "width": 3000,
+        "height": 1989,
+        "variants": [
+          {
+            "src": "media/qingdao-film/qingdao-film-5a265e05aa00098c-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-5a265e05aa00098c-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-5a265e05aa00098c-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "qingdao-film-2016ce522bc0a9f8",
+        "title": "青岛胶片 · 18",
+        "alt": "海边护栏的石柱、海面与远处的城市轮廓",
+        "caption": "",
+        "capture": { "camera": "Ricoh Elnica 35", "film": "乐凯影武者 100" },
+        "width": 3000,
+        "height": 1989,
+        "variants": [
+          {
+            "src": "media/qingdao-film/qingdao-film-2016ce522bc0a9f8-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-2016ce522bc0a9f8-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/qingdao-film/qingdao-film-2016ce522bc0a9f8-large.webp",
             "width": 3000
           }
         ]
