@@ -5763,5 +5763,581 @@
         }
       }
     ]
+  },
+  {
+    "id": "days-back-home",
+    "title": "回家的几天",
+    "subtitle": "DAYS BACK HOME",
+    "year": "",
+    "category": "返乡随记",
+    "description": "国庆回到石家庄。家门口、河边、花丛和展馆里，都是这几天重新看见的东西。",
+    "dateRange": {
+      "start": "2026-10-05",
+      "end": "2026-10-06",
+      "source": "EXIF DateTimeOriginal",
+      "datedPhotos": 18,
+      "totalPhotos": 18
+    },
+    "cover": "days-back-home-47d45fe837c9b73a",
+    "photos": [
+      {
+        "id": "days-back-home-47d45fe837c9b73a",
+        "title": "回家的几天 · 01",
+        "alt": "家门口的旧墙、空调外机和阳光照着的小凳",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-47d45fe837c9b73a-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-47d45fe837c9b73a-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-47d45fe837c9b73a-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/6.3",
+          "shutter": "1/250 s",
+          "iso": "320",
+          "dateTime": "2026-10-05T13:06"
+        }
+      },
+      {
+        "id": "days-back-home-8a253a3e149ca7d8",
+        "title": "回家的几天 · 02",
+        "alt": "一朵黄色小花立在虚化的花田前",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-8a253a3e149ca7d8-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-8a253a3e149ca7d8-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-8a253a3e149ca7d8-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/3200 s",
+          "iso": "200",
+          "dateTime": "2026-10-05T15:17"
+        }
+      },
+      {
+        "id": "days-back-home-d97ca5667e44e500",
+        "title": "回家的几天 · 03",
+        "alt": "河道上平缓流过的水，远处是树木和蓝天",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-d97ca5667e44e500-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-d97ca5667e44e500-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-d97ca5667e44e500-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/1000 s",
+          "iso": "200",
+          "dateTime": "2026-10-05T16:50"
+        }
+      },
+      {
+        "id": "days-back-home-325776a2f3a26271",
+        "title": "回家的几天 · 04",
+        "alt": "粉色波斯菊盛开，中央一朵花在阳光下清晰可见",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-325776a2f3a26271-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-325776a2f3a26271-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-325776a2f3a26271-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/4000 s",
+          "iso": "200",
+          "dateTime": "2026-10-05T17:05"
+        }
+      },
+      {
+        "id": "days-back-home-fd0887182d518d34",
+        "title": "回家的几天 · 05",
+        "alt": "草地上的一截树干长出新枝，后方有桥梁",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-fd0887182d518d34-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-fd0887182d518d34-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-fd0887182d518d34-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/3200 s",
+          "iso": "200",
+          "dateTime": "2026-10-05T17:11"
+        }
+      },
+      {
+        "id": "days-back-home-abe1545a4f5d96d2",
+        "title": "回家的几天 · 06",
+        "alt": "树林前并肩站立的马克思与恩格斯石像",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-abe1545a4f5d96d2-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-abe1545a4f5d96d2-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-abe1545a4f5d96d2-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/500 s",
+          "iso": "200",
+          "dateTime": "2026-10-06T09:06"
+        }
+      },
+      {
+        "id": "days-back-home-f0ee173902934c6d",
+        "title": "回家的几天 · 07",
+        "alt": "生锈的齿轮装置间长出绿色枝叶",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-f0ee173902934c6d-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-f0ee173902934c6d-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-f0ee173902934c6d-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/1250 s",
+          "iso": "200",
+          "dateTime": "2026-10-06T09:19"
+        }
+      },
+      {
+        "id": "days-back-home-be6d185ae5df3134",
+        "title": "回家的几天 · 08",
+        "alt": "蓝天下的湖面倒映岸边建筑和烟囱",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-be6d185ae5df3134-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-be6d185ae5df3134-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-be6d185ae5df3134-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/1250 s",
+          "iso": "200",
+          "dateTime": "2026-10-06T09:39"
+        }
+      },
+      {
+        "id": "days-back-home-920a3493cdbde09b",
+        "title": "回家的几天 · 09",
+        "alt": "展厅白墙上垂挂的长条文字作品，旁边是一扇小窗",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-920a3493cdbde09b-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-920a3493cdbde09b-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-920a3493cdbde09b-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/250 s",
+          "iso": "6400",
+          "dateTime": "2026-10-06T10:10"
+        }
+      },
+      {
+        "id": "days-back-home-49bbf44ecf5d8558",
+        "title": "回家的几天 · 10",
+        "alt": "展厅墙面上一组蓝灰色几何浮雕作品",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-49bbf44ecf5d8558-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-49bbf44ecf5d8558-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-49bbf44ecf5d8558-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/250 s",
+          "iso": "2500",
+          "dateTime": "2026-10-06T10:10"
+        }
+      },
+      {
+        "id": "days-back-home-7d54fb14e3d4e252",
+        "title": "回家的几天 · 11",
+        "alt": "深蓝色展墙前，以塔吊和楼群为主题的立体作品",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-7d54fb14e3d4e252-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-7d54fb14e3d4e252-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-7d54fb14e3d4e252-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/200 s",
+          "iso": "6400",
+          "dateTime": "2026-10-06T10:13"
+        }
+      },
+      {
+        "id": "days-back-home-6ab3fb4f047258fd",
+        "title": "回家的几天 · 12",
+        "alt": "深蓝色展墙前，色彩鲜艳的风车状立体装置",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-6ab3fb4f047258fd-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-6ab3fb4f047258fd-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-6ab3fb4f047258fd-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/250 s",
+          "iso": "2200",
+          "dateTime": "2026-10-06T10:13"
+        }
+      },
+      {
+        "id": "days-back-home-385798a321c57c24",
+        "title": "回家的几天 · 13",
+        "alt": "蓝色展厅里摆放着白蓝相间的环形雕塑",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-385798a321c57c24-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-385798a321c57c24-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-385798a321c57c24-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/250 s",
+          "iso": "1100",
+          "dateTime": "2026-10-06T10:14"
+        }
+      },
+      {
+        "id": "days-back-home-0d2d7adbf3d51e7d",
+        "title": "回家的几天 · 14",
+        "alt": "展厅里的灰黑色肌理画作，点缀金色与细线",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-0d2d7adbf3d51e7d-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-0d2d7adbf3d51e7d-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-0d2d7adbf3d51e7d-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/250 s",
+          "iso": "5000",
+          "dateTime": "2026-10-06T10:15"
+        }
+      },
+      {
+        "id": "days-back-home-b1c20fc434e12fa6",
+        "title": "回家的几天 · 15",
+        "alt": "展厅里由细小构件拼合的两幅大幅作品",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-b1c20fc434e12fa6-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-b1c20fc434e12fa6-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-b1c20fc434e12fa6-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/250 s",
+          "iso": "220",
+          "dateTime": "2026-10-06T10:19"
+        }
+      },
+      {
+        "id": "days-back-home-3d71fee0d789ed54",
+        "title": "回家的几天 · 16",
+        "alt": "展厅中一件短发人物头像雕塑",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-3d71fee0d789ed54-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/days-back-home/days-back-home-3d71fee0d789ed54-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/days-back-home/days-back-home-3d71fee0d789ed54-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/250 s",
+          "iso": "3200",
+          "dateTime": "2026-10-06T10:42"
+        }
+      },
+      {
+        "id": "days-back-home-e9cff47e73f6acd7",
+        "title": "回家的几天 · 17",
+        "alt": "红色展墙上一幅描绘坐在黑板前女子的画",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-e9cff47e73f6acd7-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-e9cff47e73f6acd7-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-e9cff47e73f6acd7-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/250 s",
+          "iso": "450",
+          "dateTime": "2026-10-06T11:05"
+        }
+      },
+      {
+        "id": "days-back-home-24ffeda3f35f564a",
+        "title": "回家的几天 · 18",
+        "alt": "蓝天下有多座尖顶的石砌建筑",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/days-back-home/days-back-home-24ffeda3f35f564a-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/days-back-home/days-back-home-24ffeda3f35f564a-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/days-back-home/days-back-home-24ffeda3f35f564a-large.webp",
+            "width": 2000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5.6",
+          "shutter": "1/1600 s",
+          "iso": "200",
+          "dateTime": "2026-10-06T20:09"
+        }
+      }
+    ]
   }
 ]
