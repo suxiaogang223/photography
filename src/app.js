@@ -1,3 +1,5 @@
+import { photoMetadata, renderPrint } from './print.js';
+
 const data = JSON.parse(document.querySelector('#gallery-data').textContent);
 const dialog = document.querySelector('.lightbox');
 const image = document.querySelector('#lightbox-image');
@@ -6,6 +8,12 @@ const close = document.querySelector('#lightbox-close');
 const previous = document.querySelector('#lightbox-prev');
 const next = document.querySelector('#lightbox-next');
 const fit = document.querySelector('#lightbox-fit');
+const printButton = document.querySelector('#lightbox-print');
+const printStatus = document.querySelector('#lightbox-print-status');
+const printDialog = document.querySelector('#print-dialog');
+const printPreview = document.querySelector('#print-preview-image');
+const printSave = document.querySelector('#print-save');
+const printClose = document.querySelector('#print-dialog-close');
 const error = document.querySelector('#lightbox-error');
 const captureDetails = document.querySelector('#lightbox-capture');
 const captureCamera = document.querySelector('#lightbox-camera');
@@ -18,6 +26,10 @@ let position = 0;
 let returnFocus = null;
 let touchStart = null;
 let controlsVisible = false;
+let printing = false;
+let printUrl = null;
+let printFilename = '';
+let printSaved = false;
 
 imageWrap.tabIndex = 0;
 imageWrap.setAttribute('role', 'button');
@@ -68,23 +80,27 @@ function showPhoto() {
   image.height = photo.height;
   document.querySelector('#lightbox-title').textContent = photo.title;
   document.querySelector('#lightbox-caption').textContent = photo.placeholder ? '布局示意插画 · 非摄影作品' : photo.caption || '';
-  const capture = photo.capture || {};
-  const exposure = [capture.focalLength, capture.aperture, capture.shutter, capture.iso && `ISO ${capture.iso}`].filter(Boolean);
-  captureCamera.textContent = capture.camera || '';
-  captureMedium.textContent = capture.film || (capture.filter ? `${capture.filter} 滤镜` : capture.lens) || '';
-  captureExposure.textContent = exposure.join(' · ');
-  captureDate.textContent = capture.dateTime ? capture.dateTime.replaceAll('-', '.').replace('T', ' ') : '';
-  if (capture.dateTime) captureDate.dateTime = capture.dateTime;
+  const metadata = photoMetadata(photo);
+  captureCamera.textContent = metadata.camera;
+  captureMedium.textContent = metadata.medium;
+  captureExposure.textContent = metadata.exposure;
+  captureDate.textContent = metadata.dateLabel;
+  if (metadata.dateTime) captureDate.dateTime = metadata.dateTime;
   else captureDate.removeAttribute('datetime');
-  captureDetails.hidden = !(captureCamera.textContent || captureMedium.textContent || exposure.length || capture.dateTime);
-  captureReadout.hidden = exposure.length === 0 && !capture.dateTime;
+  captureDetails.hidden = !(metadata.camera || metadata.medium || metadata.exposure || metadata.dateTime);
+  captureReadout.hidden = !metadata.exposure && !metadata.dateTime;
   captureDetails.classList.toggle('single-column', captureReadout.hidden);
-  captureExposure.hidden = exposure.length === 0;
-  captureDate.hidden = !capture.dateTime;
+  captureExposure.hidden = !metadata.exposure;
+  captureDate.hidden = !metadata.dateTime;
   document.querySelector('#lightbox-series').textContent = `${photo.collectionTitle} / ${photo.collectionSubtitle || ''}`;
   document.querySelector('#lightbox-count').textContent = `${String(position + 1).padStart(2, '0')} / ${String(selection.length).padStart(2, '0')}`;
   previous.disabled = position === 0;
   next.disabled = position === selection.length - 1;
+  printButton.disabled = printing || !!photo.placeholder;
+  if (!printing) {
+    printButton.textContent = '冲洗照片';
+    printStatus.textContent = '';
+  }
   if (document.activeElement === previous && previous.disabled || document.activeElement === next && next.disabled) document.querySelector('#lightbox-close').focus();
 }
 
@@ -115,6 +131,65 @@ document.querySelectorAll('[data-photo]').forEach(button => {
 previous.addEventListener('click', () => changePhoto(-1));
 next.addEventListener('click', () => changePhoto(1));
 close.addEventListener('click', () => dialog.close());
+printButton.addEventListener('click', async () => {
+  const photo = selection[position];
+  if (!photo || photo.placeholder || printing) return;
+  printing = true;
+  printButton.disabled = true;
+  printButton.textContent = '冲洗中…';
+  printStatus.textContent = '正在冲洗照片';
+  let failed = false;
+  try {
+    const source = new Image();
+    source.crossOrigin = 'anonymous';
+    await new Promise((resolve, reject) => {
+      source.onload = resolve;
+      source.onerror = () => reject(new Error('照片加载失败'));
+      source.src = photo.variants.at(-1).src;
+    });
+    const blob = await renderPrint(photo, data.brand, source);
+    if (!dialog.open || selection[position]?.id !== photo.id) return;
+    printUrl = URL.createObjectURL(blob);
+    printFilename = `${photo.id.replace(/[^a-z0-9_-]/gi, '-')}-print.jpg`;
+    printPreview.alt = `${photo.title}的冲洗照片预览`;
+    printPreview.src = printUrl;
+    printStatus.textContent = '冲洗预览已准备好';
+    printDialog.showModal();
+    printClose.focus();
+  } catch (error) {
+    console.error('照片冲洗失败', error);
+    printStatus.textContent = '冲洗失败，请重试';
+    failed = true;
+  } finally {
+    printing = false;
+    printButton.disabled = !!selection[position]?.placeholder;
+    printButton.textContent = failed ? '冲洗失败，重试' : '冲洗照片';
+  }
+});
+printClose.addEventListener('click', () => printDialog.close());
+printSave.addEventListener('click', () => {
+  if (!printUrl) return;
+  const link = document.createElement('a');
+  link.href = printUrl;
+  link.download = printFilename;
+  document.body.append(link);
+  link.click();
+  link.remove();
+  printSaved = true;
+  printDialog.close();
+});
+printDialog.addEventListener('close', () => {
+  const url = printUrl;
+  printUrl = null;
+  printPreview.removeAttribute('src');
+  if (url) {
+    if (printSaved) setTimeout(() => URL.revokeObjectURL(url), 30_000);
+    else URL.revokeObjectURL(url);
+  }
+  printSaved = false;
+  printStatus.textContent = '';
+  if (dialog.open) printButton.focus();
+});
 imageWrap.addEventListener('click', () => setControlsVisible(!controlsVisible));
 imageWrap.addEventListener('keydown', event => {
   if (event.key !== 'Enter' && event.key !== ' ') return;

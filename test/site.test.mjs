@@ -7,6 +7,7 @@ import sharp from 'sharp';
 import { ROOT, loadContent, validateContent, normalizeBase, mediaUrl } from '../scripts/lib.mjs';
 import { renderSite, buildSite } from '../scripts/build.mjs';
 import { importPhotos } from '../scripts/import-photos.mjs';
+import { photoMetadata, printLayout } from '../src/print.js';
 
 const example = {
   site: JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/content/site.json'), 'utf8')),
@@ -80,6 +81,22 @@ test('lightbox receives distinct capture details for each photo', () => {
   assert.equal(runtime.photos.find(photo => photo.id === 'places-01').capture, undefined);
   assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { gps: 'secret' } }] }]));
   assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { dateTime: 'not a date' } }] }]));
+});
+
+test('photo print keeps every pixel and labels each photo from its own capture data', () => {
+  for (const [width, height] of [[3000, 2000], [2000, 3000]]) {
+    const layout = printLayout(width, height);
+    assert.deepEqual([layout.photo.width, layout.photo.height], [width, height]);
+    assert.ok(layout.photo.x > 0 && layout.photo.y > 0);
+    assert.ok(layout.width > width && layout.height > height);
+  }
+  assert.deepEqual(photoMetadata({ capture: { camera: 'Olympus OM-2N', film: 'FUJICOLOR C200' } }), {
+    camera: 'Olympus OM-2N', medium: 'FUJICOLOR C200', exposure: '', dateTime: '', dateLabel: '',
+  });
+  assert.equal(photoMetadata({ capture: { camera: 'DazzCam', filter: 'GRD', focalLength: '35mm', iso: '50' } }).exposure, '35mm · ISO 50');
+  const page = renderSite(example).get('index.html');
+  assert.match(page, /id="lightbox-print" type="button">冲洗照片<\/button>/);
+  assert.match(page, /id="print-dialog" class="print-dialog"/);
 });
 
 test('a digital photo inside a film series keeps its own medium and no film frame', () => {
