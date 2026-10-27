@@ -41,7 +41,7 @@ export function validateContent(site, collections) {
   const ids = new Set();
   const photoIds = new Set();
   let othersCount = 0;
-  const captureKeys = new Set(['camera', 'lens', 'focalLength', 'aperture', 'shutter', 'iso', 'dateTime', 'film']);
+  const captureKeys = new Set(['camera', 'lens', 'focalLength', 'aperture', 'shutter', 'iso', 'dateTime', 'film', 'filter']);
   const validateCapture = (capture, label) => {
     if (capture === undefined) return;
     if (!capture || typeof capture !== 'object' || Array.isArray(capture)) throw new Error(`拍摄参数格式无效：${label}`);

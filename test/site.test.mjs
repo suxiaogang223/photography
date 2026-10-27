@@ -69,13 +69,14 @@ test('a digital photo inside a film series keeps its own medium and no film fram
   collection.medium = 'film';
   collection.photos[0].capture = { camera: 'Olympus OM-2N', film: 'FUJICOLOR C200' };
   collection.photos[1].medium = 'digital';
-  collection.photos[1].capture = { camera: 'iPhone 17', focalLength: '26mm' };
+  collection.photos[1].capture = { camera: 'DazzCam', filter: 'GRD', focalLength: '35mm' };
   validateContent(content.site, content.collections);
   const page = renderSite(content).get(`series/${collection.id}/index.html`);
   assert.match(page, new RegExp(`class="photo-open film-frame" data-photo="${collection.photos[0].id}"`));
   assert.match(page, new RegExp(`class="photo-open" data-photo="${collection.photos[1].id}"`));
   const runtime = JSON.parse(page.match(/<script id="gallery-data" type="application\/json">(.*?)<\/script>/s)[1]);
   assert.equal(runtime.photos.find(photo => photo.id === collection.photos[0].id).medium, 'film');
+  assert.deepEqual(runtime.photos.find(photo => photo.id === collection.photos[1].id).capture, { camera: 'DazzCam', filter: 'GRD', focalLength: '35mm' });
   assert.equal(runtime.photos.find(photo => photo.id === collection.photos[1].id).medium, 'digital');
   collection.photos[1].medium = 'phone';
   assert.throws(() => validateContent(content.site, content.collections), /照片媒介无效/);

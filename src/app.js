@@ -59,7 +59,7 @@ function showPhoto() {
   const capture = photo.capture || {};
   const exposure = [capture.focalLength, capture.aperture, capture.shutter, capture.iso && `ISO ${capture.iso}`].filter(Boolean);
   captureCamera.textContent = capture.camera || '';
-  captureMedium.textContent = capture.film || capture.lens || '';
+  captureMedium.textContent = capture.film || (capture.filter ? `${capture.filter} 滤镜` : capture.lens) || '';
   captureExposure.textContent = exposure.join(' · ');
   captureDate.textContent = capture.dateTime ? capture.dateTime.replaceAll('-', '.').replace('T', ' ') : '';
   if (capture.dateTime) captureDate.dateTime = capture.dateTime;
