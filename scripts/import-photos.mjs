@@ -5,9 +5,10 @@ import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
 import { ROOT, args, validId, validateContent } from './lib.mjs';
 import { captureFromExif } from './photo-metadata.mjs';
+import { datePrecision } from '../src/photo-metadata.js';
 
 const supported = new Set(['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff', '.avif']);
-export async function importPhotos({ inputDir, collectionId, title, medium, root = ROOT }) {
+export async function importPhotos({ inputDir, collectionId, title, medium, date, root = ROOT }) {
   if (!validId(collectionId)) throw new Error('系列 ID 只能使用小写英文、数字和单个连接号。');
   if (medium !== undefined && !['film', 'digital'].includes(medium)) throw new Error('媒介只能是 film 或 digital。');
   const source = path.resolve(inputDir);
@@ -26,7 +27,8 @@ export async function importPhotos({ inputDir, collectionId, title, medium, root
     collections.push(collection);
   }
   if (medium && !collection.medium) collection.medium = medium;
-  const isFilm = collection.medium === 'film';
+  const isFilm = collection.medium === 'film' || collection.photos.some(photo => photo.capture?.film);
+  if (date !== undefined && (!datePrecision(date) || isFilm && datePrecision(date) === 'minute')) throw new Error('导入日期无效；胶片请使用 YYYY-MM-DD 或 YYYY-MM。');
   const destination = path.join(root, 'assets', 'media', collectionId);
   await mkdir(destination, { recursive: true });
   const additions = [];
@@ -42,7 +44,8 @@ export async function importPhotos({ inputDir, collectionId, title, medium, root
       sourceMetadata = await sharp(sourceBuffer, { failOn: 'error', limitInputPixels: 100_000_000 }).metadata();
     } catch (error) { throw new Error(`图片无法处理：${filename}。${error.message}`); }
     // Scanned film often records the scanner as the camera. Film details are manual per photo.
-    const capture = isFilm || collection.photos.some(photo => photo.capture?.film) ? null : captureFromExif(sourceMetadata.exif);
+    let capture = isFilm ? null : captureFromExif(sourceMetadata.exif);
+    if (date) capture = { ...capture, date, dateSource: 'manual' };
     const variants = [];
     let largest;
     // Default Sharp output strips EXIF, XMP and IPTC. Rotate first, normalize color to sRGB.
@@ -87,12 +90,12 @@ export async function importPhotos({ inputDir, collectionId, title, medium, root
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   try {
     if (process.argv.includes('--help')) {
-      console.log('npm run import -- --input /绝对路径/照片目录 --collection ordinary-light --title "寻常的光" [--medium film]\n支持 JPEG、PNG、WebP、TIFF、AVIF。胶片保留原始横竖构图；只生成展示图，不复制原图。');
+      console.log('npm run import -- --input /绝对路径/照片目录 --collection ordinary-light --title "寻常的光" [--medium film] [--date YYYY-MM-DD]\n支持 JPEG、PNG、WebP、TIFF、AVIF。胶片保留原始横竖构图；只生成展示图，不复制原图。');
     } else {
       const options = args(process.argv.slice(2));
-      if (!options.input || !options.collection || Object.keys(options).some(key => !['input', 'collection', 'title', 'medium'].includes(key))) throw new Error('用法：npm run import -- --input /照片目录 --collection 系列-id [--title 系列名称] [--medium film]');
-      const result = await importPhotos({ inputDir: options.input, collectionId: options.collection, title: options.title, medium: options.medium });
-      console.log(`导入 ${result.imported} 张，跳过 ${result.skipped} 张，新增展示图片 ${(result.bytes / 1e6).toFixed(2)} MB。请在 content/collections.json 完善标题、描述和排序。`);
+      if (!options.input || !options.collection || Object.keys(options).some(key => !['input', 'collection', 'title', 'medium', 'date'].includes(key))) throw new Error('用法：npm run import -- --input /照片目录 --collection 系列-id [--title 系列名称] [--medium film] [--date YYYY-MM-DD]');
+      const result = await importPhotos({ inputDir: options.input, collectionId: options.collection, title: options.title, medium: options.medium, date: options.date });
+      console.log(`导入 ${result.imported} 张，跳过 ${result.skipped} 张，新增展示图片 ${(result.bytes / 1e6).toFixed(2)} MB。请在 content/collections.json 完善标题、描述、拍摄信息和排序。`);
     }
   } catch (error) { console.error(error.message); process.exitCode = 1; }
 }

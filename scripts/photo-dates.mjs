@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import sharp from 'sharp';
+import { datePrecision } from '../src/photo-metadata.js';
 
 // Read only DateTimeOriginal, never GPS, file modification time or scan time tags.
 // Keep the date as recorded by the camera; UTC conversion could change its day.
@@ -35,11 +36,9 @@ export function captureDateFromExif(exif) {
   readIfd(uint32(4));
   const match = original?.match(/^(\d{4}):(\d{2}):(\d{2}) (\d{2}):(\d{2}):(\d{2})$/);
   if (!match) return null;
-  const [year, month, day, hour, minute, second] = match.slice(1).map(Number);
-  if (year < 1900 || hour > 23 || minute > 59 || second > 59) return null;
-  const calendar = new Date(Date.UTC(year, month - 1, day));
-  if (calendar.getUTCFullYear() !== year || calendar.getUTCMonth() !== month - 1 || calendar.getUTCDate() !== day) return null;
-  return `${match[1]}-${match[2]}-${match[3]}`;
+  const day = `${match[1]}-${match[2]}-${match[3]}`;
+  if (!datePrecision(day) || +match[4] > 23 || +match[5] > 59 || +match[6] > 59) return null;
+  return day;
 }
 
 export function summarizeDates(dates) {

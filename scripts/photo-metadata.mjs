@@ -73,6 +73,9 @@ export function captureFromExif(exif) {
       ? `1/${reciprocal} s` : `${Number(seconds.toFixed(3))} s`;
   }
   if (iso > 0 && iso < 1_000_000) result.iso = String(iso);
-  if (date && originalTime?.startsWith(date.replaceAll('-', ':'))) result.dateTime = `${date}T${originalTime.slice(11, 16)}`;
+  if (date && originalTime?.startsWith(date.replaceAll('-', ':'))) {
+    result.date = `${date}T${originalTime.slice(11, 16)}`;
+    result.dateSource = 'exif';
+  }
   return Object.keys(result).length ? result : null;
 }

@@ -4,10 +4,11 @@ import { cp, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/pr
 import path from 'node:path';
 import os from 'node:os';
 import sharp from 'sharp';
-import { ROOT, loadContent, validateContent, normalizeBase, mediaUrl } from '../scripts/lib.mjs';
+import { ROOT, loadContent, validateContent, validatePublishedDates, normalizeBase, mediaUrl } from '../scripts/lib.mjs';
 import { renderSite, buildSite } from '../scripts/build.mjs';
 import { importPhotos } from '../scripts/import-photos.mjs';
-import { photoMetadata, printLayout } from '../src/print.js';
+import { printLayout } from '../src/print.js';
+import { photoMetadata, photoMedium, datePrecision } from '../src/photo-metadata.js';
 
 const example = {
   site: JSON.parse(await readFile(path.join(ROOT, 'test/fixtures/content/site.json'), 'utf8')),
@@ -49,6 +50,48 @@ test('live collections and their image files remain valid independently of sampl
   }
 });
 
+test('published photos have complete dates at the precision appropriate to each medium', async () => {
+  const { collections } = await loadContent();
+  validatePublishedDates(collections);
+  for (const collection of collections) {
+    for (const photo of collection.photos) {
+      const precision = datePrecision(photo.capture.date);
+      assert.ok(precision, photo.id);
+      assert.equal(precision, collection.kind === 'others' ? 'month' : photoMedium(photo, collection) === 'film' ? 'day' : 'minute', photo.id);
+      if (photoMedium(photo, collection) === 'film') {
+        assert.match(photo.capture.focalLength, /^\d+mm$/);
+        assert.equal(photo.capture.aperture, undefined);
+        assert.equal(photo.capture.shutter, undefined);
+      }
+    }
+  }
+  const qingdao = collections.find(collection => collection.id === 'qingdao-film');
+  assert.equal(qingdao.dateRange.start, '2026-10-01');
+  assert.equal(qingdao.dateRange.end, '2026-10-02');
+  for (const photo of qingdao.photos) {
+    assert.equal(photo.capture.date, photo.capture.film === 'Kodak UltraMax 400' ? '2026-10-01' : '2026-10-02');
+    assert.equal(photoMetadata(photo).exposure, '40mm');
+  }
+  const others = collections.find(collection => collection.kind === 'others');
+  assert.equal(others.dateRange, undefined);
+  assert.ok(others.photos.every(photo => photo.capture.date === '2026-10' && photo.capture.dateSource === 'processing-month'));
+  const zoo = collections.find(collection => collection.id === 'zoo');
+  assert.ok(zoo.photos.slice(0, 18).every(photo => photoMetadata(photo).exposure === '50mm'));
+  assert.deepEqual(zoo.photos.slice(-3).map(photo => photo.capture.date), ['2026-10-25T14:00', '2026-10-25T14:00', '2026-10-25T14:01']);
+});
+
+test('publishing blocks missing dates and dates outside a series while allowing import drafts', () => {
+  const collections = structuredClone(example.collections);
+  const photo = collections[0].photos[0];
+  delete photo.placeholder;
+  validateContent(example.site, collections);
+  assert.throws(() => validatePublishedDates(collections), /补全照片日期/);
+  photo.capture = { date: '2026-10-01', dateSource: 'manual' };
+  assert.doesNotThrow(() => validatePublishedDates(collections));
+  collections[0].dateRange = { start: '2026-10-02', end: '2026-10-02' };
+  assert.throws(() => validatePublishedDates(collections), /超出系列日期/);
+});
+
 test('zoo curation keeps the GRD cover and the black-and-white GRF frame last', async () => {
   const live = await loadContent();
   const zoo = live.collections.find(collection => collection.id === 'zoo');
@@ -70,7 +113,7 @@ test('zoo curation keeps the GRD cover and the black-and-white GRF frame last', 
 
 test('lightbox receives distinct capture details for each photo', () => {
   const modified = structuredClone(example);
-  modified.collections[0].photos[0].capture = { camera: 'NIKON Z fc', aperture: 'f/5.6', shutter: '1/640 s', iso: '200', dateTime: '2026-10-01T16:29' };
+  modified.collections[0].photos[0].capture = { camera: 'NIKON Z fc', aperture: 'f/5.6', shutter: '1/640 s', iso: '200', date: '2026-10-01T16:29' };
   modified.collections[0].photos[1].capture = { camera: 'Ricoh Elnica 35', film: 'Kodak UltraMax 400' };
   const page = renderSite(modified).get('index.html');
   assert.match(page, /id="lightbox-capture" class="lightbox-capture" role="group" aria-label="照片拍摄参数" hidden/);
@@ -80,7 +123,7 @@ test('lightbox receives distinct capture details for each photo', () => {
   assert.deepEqual(runtime.photos.find(photo => photo.id === 'light-02').capture, modified.collections[0].photos[1].capture);
   assert.equal(runtime.photos.find(photo => photo.id === 'places-01').capture, undefined);
   assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { gps: 'secret' } }] }]));
-  assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { dateTime: 'not a date' } }] }]));
+  assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], capture: { date: 'not a date' } }] }]));
 });
 
 test('photo print keeps every pixel and labels each photo from its own capture data', () => {
@@ -89,9 +132,12 @@ test('photo print keeps every pixel and labels each photo from its own capture d
     assert.deepEqual([layout.photo.width, layout.photo.height], [width, height]);
     assert.ok(layout.photo.x > 0 && layout.photo.y > 0);
     assert.ok(layout.width > width && layout.height > height);
+    assert.ok(layout.columns.left.x + layout.columns.left.width < layout.columns.right.x);
+    assert.equal(layout.columns.left.x, layout.photo.x);
+    assert.equal(layout.columns.right.x + layout.columns.right.width, layout.photo.x + width);
   }
   assert.deepEqual(photoMetadata({ capture: { camera: 'Olympus OM-2N', film: 'FUJICOLOR C200' } }), {
-    camera: 'Olympus OM-2N', medium: 'FUJICOLOR C200', exposure: '', dateTime: '', dateLabel: '',
+    camera: 'Olympus OM-2N', medium: 'FUJICOLOR C200', exposure: '', date: '', dateLabel: '',
   });
   assert.equal(photoMetadata({ capture: { camera: 'DazzCam', filter: 'GRD', focalLength: '35mm', iso: '50' } }).exposure, '35mm · ISO 50');
   const page = renderSite(example).get('index.html');
@@ -408,6 +454,21 @@ test('film import retains portrait orientation without cropping or changing sour
   assert.deepEqual([info.width, info.height], [200, 300]);
   assert.match(renderSite(content).get('series/film-roll/index.html'), /class="photo-open film-frame film-portrait"/);
   await assert.rejects(importPhotos({ inputDir, collectionId: 'film-roll', medium: 'digital', root }), /媒介与导入参数不一致/);
+});
+
+test('film import uses an explicit date and does not substitute scanner timestamps', async t => {
+  const root = await workspace(t);
+  const inputDir = path.join(root, 'incoming');
+  await mkdir(inputDir);
+  await sharp({ create: { width: 200, height: 300, channels: 3, background: '#778d6b' } })
+    .withExif({ IFD0: { Model: 'SP-3000' }, IFD2: { DateTimeOriginal: '2026:10:14 16:55:00' } })
+    .jpeg().toFile(path.join(inputDir, 'scan.jpg'));
+  await importPhotos({ inputDir, collectionId: 'dated-roll', medium: 'film', date: '2026-10-01', root });
+  const { collections } = await loadContent(root);
+  assert.deepEqual(collections.at(-1).photos[0].capture, { date: '2026-10-01', dateSource: 'manual' });
+  const before = await readFile(path.join(root, 'content/collections.json'));
+  await assert.rejects(importPhotos({ inputDir, collectionId: 'dated-roll', date: '2026-10-01T14:00', root }), /胶片/);
+  assert.deepEqual(await readFile(path.join(root, 'content/collections.json')), before);
 });
 
 test('identical files within one import batch are deduplicated', async t => {

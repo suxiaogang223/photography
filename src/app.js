@@ -1,4 +1,5 @@
-import { photoMetadata, renderPrint } from './print.js';
+import { photoMetadata } from './photo-metadata.js';
+import { renderPrint } from './print.js';
 
 const data = JSON.parse(document.querySelector('#gallery-data').textContent);
 const dialog = document.querySelector('.lightbox');
@@ -83,15 +84,16 @@ function showPhoto() {
   const metadata = photoMetadata(photo);
   captureCamera.textContent = metadata.camera;
   captureMedium.textContent = metadata.medium;
+  captureMedium.hidden = !metadata.medium;
   captureExposure.textContent = metadata.exposure;
   captureDate.textContent = metadata.dateLabel;
-  if (metadata.dateTime) captureDate.dateTime = metadata.dateTime;
+  if (metadata.date) captureDate.dateTime = metadata.date;
   else captureDate.removeAttribute('datetime');
-  captureDetails.hidden = !(metadata.camera || metadata.medium || metadata.exposure || metadata.dateTime);
-  captureReadout.hidden = !metadata.exposure && !metadata.dateTime;
+  captureDetails.hidden = !(metadata.camera || metadata.medium || metadata.exposure || metadata.date);
+  captureReadout.hidden = !metadata.exposure && !metadata.date;
   captureDetails.classList.toggle('single-column', captureReadout.hidden);
   captureExposure.hidden = !metadata.exposure;
-  captureDate.hidden = !metadata.dateTime;
+  captureDate.hidden = !metadata.date;
   document.querySelector('#lightbox-series').textContent = `${photo.collectionTitle} / ${photo.collectionSubtitle || ''}`;
   document.querySelector('#lightbox-count').textContent = `${String(position + 1).padStart(2, '0')} / ${String(selection.length).padStart(2, '0')}`;
   previous.disabled = position === 0;

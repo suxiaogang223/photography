@@ -1,6 +1,7 @@
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { datePrecision, photoMedium } from '../src/photo-metadata.js';
 
 export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 export const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
@@ -41,14 +42,18 @@ export function validateContent(site, collections) {
   const ids = new Set();
   const photoIds = new Set();
   let othersCount = 0;
-  const captureKeys = new Set(['camera', 'lens', 'focalLength', 'aperture', 'shutter', 'iso', 'dateTime', 'film', 'filter']);
+  const captureKeys = new Set(['camera', 'lens', 'focalLength', 'aperture', 'shutter', 'iso', 'date', 'dateSource', 'film', 'filter']);
+  const dateSources = new Set(['exif', 'manual', 'series', 'processing-month']);
   const validateCapture = (capture, label) => {
     if (capture === undefined) return;
     if (!capture || typeof capture !== 'object' || Array.isArray(capture)) throw new Error(`拍摄参数格式无效：${label}`);
     for (const [key, value] of Object.entries(capture)) {
       if (!captureKeys.has(key) || typeof value !== 'string' || !value.trim() || value.length > 120) throw new Error(`拍摄参数无效：${label}.${key}`);
-      if (key === 'dateTime' && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(value)) throw new Error(`拍摄时间无效：${label}`);
+      if (key === 'date' && !datePrecision(value)) throw new Error(`拍摄日期无效：${label}`);
+      if (key === 'dateSource' && !dateSources.has(value)) throw new Error(`日期来源无效：${label}`);
     }
+    if (capture.dateSource && !capture.date) throw new Error(`日期来源缺少日期：${label}`);
+    if (capture.dateSource === 'processing-month' && datePrecision(capture.date) !== 'month') throw new Error(`冲洗月份只能精确到月：${label}`);
   };
   for (const collection of collections) {
     if (!validId(collection.id) || ids.has(collection.id)) throw new Error(`系列 ID 无效或重复：${collection.id}`);
@@ -65,6 +70,7 @@ export function validateContent(site, collections) {
       photoIds.add(photo.id);
       if (photo.medium !== undefined && !['film', 'digital'].includes(photo.medium)) throw new Error(`照片媒介无效：${photo.id}`);
       validateCapture(photo.capture, photo.id);
+      if (photoMedium(photo, collection) === 'film' && datePrecision(photo.capture?.date) === 'minute') throw new Error(`胶片日期不应包含时分：${photo.id}`);
       if (!photo.alt?.trim() || !photo.title?.trim()) throw new Error(`照片需要标题和替代文字：${photo.id}`);
       if (![photo.width, photo.height].every(value => Number.isInteger(value) && value > 0)) throw new Error(`照片尺寸无效：${photo.id}`);
       if (!Array.isArray(photo.variants) || !photo.variants.length) throw new Error(`照片需要图片版本：${photo.id}`);
@@ -95,6 +101,19 @@ export async function loadContent(root = ROOT) {
     }
   }
   return { site, collections };
+}
+
+// Imports may be drafts; publishing requires a date with an explicit provenance.
+export function validatePublishedDates(collections) {
+  for (const collection of collections) {
+    for (const photo of collection.photos) {
+      if (photo.placeholder) continue;
+      if (!photo.capture?.date || !photo.capture.dateSource) throw new Error(`请补全照片日期和来源：${photo.title}（${photo.id}）`);
+      const day = photo.capture.date.slice(0, 10);
+      if (collection.dateRange && datePrecision(photo.capture.date) !== 'month'
+        && (day < collection.dateRange.start || day > collection.dateRange.end)) throw new Error(`照片日期超出系列日期范围：${photo.id}`);
+    }
+  }
 }
 
 export function mediaUrl(src, site, base) {

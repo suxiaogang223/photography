@@ -1,7 +1,8 @@
 import { cp, mkdir, readdir, rm, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
-import { ROOT, escapeHtml as e, scriptJson, loadContent, mediaUrl, normalizeBase } from './lib.mjs';
+import { ROOT, escapeHtml as e, scriptJson, loadContent, mediaUrl, normalizeBase, validatePublishedDates } from './lib.mjs';
+import { photoMedium } from '../src/photo-metadata.js';
 
 export function renderSite({ site, collections }, base = '/photography/') {
   base = normalizeBase(base);
@@ -12,7 +13,7 @@ export function renderSite({ site, collections }, base = '/photography/') {
     Number(left.kind === 'others') - Number(right.kind === 'others')
     || seriesDate(right).localeCompare(seriesDate(left))
     || (right.dateRange?.end || '').localeCompare(left.dateRange?.end || ''));
-  const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year, medium: photo.medium || collection.medium || 'digital' })));
+  const photos = active.flatMap(collection => collection.photos.map(photo => ({ ...photo, collection: collection.id, collectionTitle: collection.title, collectionSubtitle: collection.subtitle, year: collection.year, medium: photoMedium(photo, collection) })));
   const published = photos.filter(photo => !photo.placeholder);
   const demo = photos.some(photo => photo.placeholder);
   const count = number => String(number).padStart(2, '0');
@@ -76,6 +77,7 @@ async function directoryBytes(directory) {
 
 export async function buildSite({ root = ROOT, outDir = path.join(ROOT, 'dist'), base = process.env.SITE_BASE_PATH || '/photography/' } = {}) {
   const content = await loadContent(root);
+  validatePublishedDates(content.collections);
   const pages = renderSite(content, base);
   // dist is generated output only; source photos and manifests are never removed.
   await mkdir(outDir, { recursive: true });

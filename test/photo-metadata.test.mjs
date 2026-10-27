@@ -41,7 +41,8 @@ test('reads camera, lens and exposure values from both EXIF byte orders', () => 
     aperture: 'f/6.3',
     shutter: '1/640 s',
     iso: '200',
-    dateTime: '2026-10-01T16:29',
+    date: '2026-10-01T16:29',
+    dateSource: 'exif',
   });
 });
 

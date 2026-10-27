@@ -1,13 +1,4 @@
-export function photoMetadata(photo) {
-  const capture = photo.capture || {};
-  return {
-    camera: capture.camera || '',
-    medium: capture.film || (capture.filter ? `${capture.filter} 滤镜` : capture.lens) || '',
-    exposure: [capture.focalLength, capture.aperture, capture.shutter, capture.iso && `ISO ${capture.iso}`].filter(Boolean).join(' · '),
-    dateTime: capture.dateTime || '',
-    dateLabel: capture.dateTime ? capture.dateTime.replaceAll('-', '.').replace('T', ' ') : '',
-  };
-}
+import { photoMetadata } from './photo-metadata.js';
 
 export function printLayout(width, height) {
   if (!Number.isSafeInteger(width) || !Number.isSafeInteger(height) || width <= 0 || height <= 0) {
@@ -16,12 +7,18 @@ export function printLayout(width, height) {
   const shortSide = Math.min(width, height);
   const margin = Math.max(24, Math.round(shortSide * 0.04));
   const footer = Math.max(170, Math.round(shortSide * 0.16));
+  const gap = Math.min(width * 0.08, Math.max(12, Math.round(shortSide * 0.03)));
+  const columnWidth = (width - gap) / 2;
   return {
     width: width + margin * 2,
     height: height + margin + footer,
     photo: { x: margin, y: margin, width, height },
     margin,
     footer,
+    columns: {
+      left: { x: margin, width: columnWidth },
+      right: { x: margin + width - columnWidth, width: columnWidth },
+    },
   };
 }
 
@@ -56,28 +53,31 @@ export async function renderPrint(photo, brand, source) {
   const titleSize = Math.max(20, Math.min(54, Math.round(shortSide * 0.024)));
   const bodySize = Math.max(14, Math.min(32, Math.round(shortSide * 0.014)));
   const smallSize = Math.max(12, Math.min(24, Math.round(shortSide * 0.011)));
-  const left = layout.margin;
-  const fullWidth = layout.width - layout.margin * 2;
+  const { left, right } = layout.columns;
+  const rightEdge = right.x + right.width;
   const footerTop = layout.photo.y + layout.photo.height;
   const titleY = footerTop + Math.round(layout.margin * 0.78) + titleSize;
+  const equipmentY = titleY + Math.round(bodySize * 1.55);
+  const exposureY = metadata.medium ? titleY + Math.round(bodySize * 2.95) : equipmentY;
+  const signatureY = layout.height - Math.round(layout.margin * 0.65);
 
   context.textAlign = 'left';
   context.textBaseline = 'alphabetic';
   context.fillStyle = '#242321';
-  fittedText(context, photo.title, left, titleY, fullWidth, titleSize, 400, 12, serifFont);
-
-  const equipment = [metadata.camera, metadata.medium].filter(Boolean).join(' · ');
+  fittedText(context, photo.title, left.x, titleY, left.width, titleSize, 400, 12, serifFont);
   context.fillStyle = '#66635e';
-  fittedText(context, equipment, left, titleY + Math.round(bodySize * 1.55), fullWidth, bodySize);
-  fittedText(context, metadata.exposure, left, titleY + Math.round(bodySize * 2.95), fullWidth, bodySize);
-  fittedText(context, metadata.dateLabel, left, titleY + Math.round(bodySize * 4.15), fullWidth * 0.65, smallSize);
+  fittedText(context, metadata.dateLabel, left.x, equipmentY, left.width, smallSize);
 
   context.textAlign = 'right';
-  context.fillStyle = '#242321';
-  const right = layout.width - layout.margin;
-  fittedText(context, brand.nameEn, right, layout.height - Math.round(layout.margin * 1.32), fullWidth * 0.46, smallSize, 600);
-  context.fillStyle = '#77736e';
-  fittedText(context, brand.siteUrl.replace(/^https?:\/\//, ''), right, layout.height - Math.round(layout.margin * 0.62), fullWidth * 0.58, Math.max(11, smallSize - 3));
+  fittedText(context, metadata.camera, rightEdge, titleY, right.width, bodySize, 500);
+  fittedText(context, metadata.medium, rightEdge, equipmentY, right.width, bodySize);
+  fittedText(context, metadata.exposure, rightEdge, exposureY, right.width, bodySize);
+
+  context.fillStyle = '#a09b94';
+  context.textAlign = 'left';
+  fittedText(context, brand.nameEn, left.x, signatureY, left.width, smallSize);
+  context.textAlign = 'right';
+  fittedText(context, brand.siteUrl.replace(/^https?:\/\//, ''), rightEdge, signatureY, right.width, Math.max(11, smallSize - 3));
 
   return new Promise((resolve, reject) => {
     try {
