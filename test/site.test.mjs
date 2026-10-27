@@ -48,6 +48,19 @@ test('live collections and their image files remain valid independently of sampl
   }
 });
 
+test('zoo curation keeps the GRD cover and the black-and-white GRF frame last', async () => {
+  const live = await loadContent();
+  const zoo = live.collections.find(collection => collection.id === 'zoo');
+  assert.equal(zoo.photos[0].id, 'zoo-3ff50c54b7444a37');
+  assert.equal(zoo.photos[17].id, 'zoo-134452a4721f8017');
+  assert.equal(zoo.cover, zoo.photos[18].id);
+  assert.deepEqual(zoo.photos.slice(-3).map(photo => [photo.id, photo.capture.filter, photo.medium]), [
+    ['zoo-9c2ff79d3220b9f1', 'GRD', 'digital'],
+    ['zoo-86ef0e5a9baa0308', 'FXN', 'digital'],
+    ['zoo-d85ca138add816e2', 'GRF', 'digital'],
+  ]);
+});
+
 test('lightbox receives distinct capture details for each photo', () => {
   const modified = structuredClone(example);
   modified.collections[0].photos[0].capture = { camera: 'NIKON Z fc', aperture: 'f/5.6', shutter: '1/640 s', iso: '200', dateTime: '2026-10-01T16:29' };
