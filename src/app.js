@@ -2,6 +2,7 @@ const data = JSON.parse(document.querySelector('#gallery-data').textContent);
 const dialog = document.querySelector('.lightbox');
 const image = document.querySelector('#lightbox-image');
 const imageWrap = document.querySelector('.lightbox-image-wrap');
+const close = document.querySelector('#lightbox-close');
 const previous = document.querySelector('#lightbox-prev');
 const next = document.querySelector('#lightbox-next');
 const fit = document.querySelector('#lightbox-fit');
@@ -16,6 +17,18 @@ let selection = [];
 let position = 0;
 let returnFocus = null;
 let touchStart = null;
+let controlsVisible = false;
+
+imageWrap.tabIndex = 0;
+imageWrap.setAttribute('role', 'button');
+
+function setControlsVisible(visible) {
+  controlsVisible = visible;
+  dialog.classList.toggle('controls-visible', visible);
+  imageWrap.setAttribute('aria-pressed', String(visible));
+  imageWrap.setAttribute('aria-label', `${image.alt || '照片'}，${visible ? '隐藏' : '显示'}照片信息`);
+  if (!visible && dialog.open && document.activeElement !== close) imageWrap.focus({ preventScroll: true });
+}
 
 function resetZoom() {
   imageWrap.classList.remove('zoomed');
@@ -49,11 +62,10 @@ function showPhoto() {
   error.hidden = true;
   // Only the currently viewed photo gets its large variant. No album-wide preloading.
   image.alt = photo.alt;
+  imageWrap.setAttribute('aria-label', `${photo.alt}，${controlsVisible ? '隐藏' : '显示'}照片信息`);
   image.src = photo.variants.at(-1).src;
   image.width = photo.width;
   image.height = photo.height;
-  imageWrap.classList.toggle('film-view', photo.medium === 'film');
-  imageWrap.classList.toggle('film-portrait', photo.medium === 'film' && photo.height > photo.width);
   document.querySelector('#lightbox-title').textContent = photo.title;
   document.querySelector('#lightbox-caption').textContent = photo.placeholder ? '布局示意插画 · 非摄影作品' : photo.caption || '';
   const capture = photo.capture || {};
@@ -95,15 +107,23 @@ document.querySelectorAll('[data-photo]').forEach(button => {
     showPhoto();
     dialog.showModal();
     document.body.classList.add('viewer-open');
-    document.querySelector('#lightbox-close').focus();
+    setControlsVisible(true);
+    close.focus();
   });
 });
 
 previous.addEventListener('click', () => changePhoto(-1));
 next.addEventListener('click', () => changePhoto(1));
-document.querySelector('#lightbox-close').addEventListener('click', () => dialog.close());
+close.addEventListener('click', () => dialog.close());
+imageWrap.addEventListener('click', () => setControlsVisible(!controlsVisible));
+imageWrap.addEventListener('keydown', event => {
+  if (event.key !== 'Enter' && event.key !== ' ') return;
+  event.preventDefault();
+  setControlsVisible(!controlsVisible);
+});
 dialog.addEventListener('close', () => {
   document.body.classList.remove('viewer-open');
+  setControlsVisible(false);
   resetZoom();
   image.removeAttribute('src');
   returnFocus?.focus();
@@ -145,8 +165,11 @@ imageWrap.addEventListener('touchend', event => {
   const dx = event.changedTouches[0].clientX - touchStart.x;
   const dy = event.changedTouches[0].clientY - touchStart.y;
   touchStart = null;
-  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) changePhoto(dx < 0 ? 1 : -1);
-}, { passive: true });
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+    event.preventDefault();
+    changePhoto(dx < 0 ? 1 : -1);
+  }
+});
 
 const filterButtons = [...document.querySelectorAll('[data-filter]')];
 const cards = [...document.querySelectorAll('.contact-photo')];

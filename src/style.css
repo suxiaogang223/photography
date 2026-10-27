@@ -18,17 +18,59 @@ main{overflow:hidden}.intro{width:86%;max-width:1530px;margin:76px auto 56px;dis
 .lightbox-bottom{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;row-gap:14px}.lightbox-bottom>div:first-child{min-width:0}.lightbox-capture{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:24px;padding-top:14px;border-top:1px solid #303030}.lightbox-capture.single-column{grid-template-columns:1fr}.lightbox-equipment,.lightbox-readout{min-width:0;display:flex;flex-direction:column;gap:5px;font-family:var(--mono);line-height:1.5}.lightbox-equipment strong{font-size:12px;font-weight:600;letter-spacing:.02em}.lightbox-equipment span{font-size:10px;color:#a3a3a3;overflow-wrap:anywhere}.lightbox-readout{border-left:1px solid #4a4a4a;padding-left:24px;text-align:right;align-items:flex-end}.lightbox-bottom .lightbox-readout p{font-family:var(--mono);font-size:11px;font-weight:600;color:#dddddd;line-height:1.5;margin:0;max-width:none}.lightbox-readout time{font-size:10px;color:#a3a3a3}
 @media(max-width:700px){.lightbox-bottom{row-gap:10px}.lightbox-capture{grid-template-columns:1fr;gap:9px;padding-top:10px}.lightbox-equipment,.lightbox-readout{gap:3px}.lightbox-equipment strong{font-size:11px}.lightbox-equipment span{font-size:9px}.lightbox-readout{border-left:0;padding-left:0;text-align:left;align-items:flex-start}.lightbox-bottom .lightbox-readout p{font-size:10px}.lightbox-readout time{font-size:9px}}
 
-/* The film stock sits outside the complete image; no gallery frame masks pixels. */
-.photo-open.film-frame,.lightbox-image-wrap.film-view img{background-color:#101010;background-image:radial-gradient(ellipse 4px 3px at center,#666666 72%,transparent 78%),radial-gradient(ellipse 4px 3px at center,#666666 72%,transparent 78%);background-size:22px 9px;background-position:left 5px top 5px,left 5px bottom 5px;background-repeat:repeat-x;box-shadow:0 10px 30px #0007;border:1px solid #393939}
+/* Film decoration stays in the gallery; the lightbox shows the complete image alone. */
+.photo-open.film-frame{background-color:#101010;background-image:radial-gradient(ellipse 4px 3px at center,#666666 72%,transparent 78%),radial-gradient(ellipse 4px 3px at center,#666666 72%,transparent 78%);background-size:22px 9px;background-position:left 5px top 5px,left 5px bottom 5px;background-repeat:repeat-x;box-shadow:0 10px 30px #0007;border:1px solid #393939}
 .photo-open.film-frame{padding:18px 11px}
 .photo-open.film-frame img{object-fit:contain;background:#080808}
 .contact-photo .photo-open.film-frame{aspect-ratio:auto}
 .contact-photo .photo-open.film-frame img{height:auto}
 .collection-photo .photo-open.film-frame{background-color:#101010}
-.lightbox-image-wrap.film-view img{width:auto;height:auto;max-width:100%;max-height:100%;padding:18px 11px;object-fit:contain}
-.lightbox-image-wrap.film-view.zoomed img{max-width:none;max-height:none}
-@media(max-width:700px){.photo-open.film-frame,.lightbox-image-wrap.film-view img{padding:12px 7px;background-size:17px 7px;background-position:left 4px top 3px,left 4px bottom 3px}}
-.photo-open.film-frame.film-portrait,.lightbox-image-wrap.film-view.film-portrait img{padding:11px 18px;background-size:9px 22px;background-position:left 5px top 5px,right 5px top 5px;background-repeat:repeat-y}
-@media(max-width:700px){.photo-open.film-frame.film-portrait,.lightbox-image-wrap.film-view.film-portrait img{padding:7px 12px;background-size:7px 17px;background-position:left 3px top 4px,right 3px top 4px}}
-/* The bitmap's CSS size is its loaded pixel size divided by devicePixelRatio. Film padding stays outside those pixels. */
+@media(max-width:700px){.photo-open.film-frame{padding:12px 7px;background-size:17px 7px;background-position:left 4px top 3px,left 4px bottom 3px}}
+.photo-open.film-frame.film-portrait{padding:11px 18px;background-size:9px 22px;background-position:left 5px top 5px,right 5px top 5px;background-repeat:repeat-y}
+@media(max-width:700px){.photo-open.film-frame.film-portrait{padding:7px 12px;background-size:7px 17px;background-position:left 3px top 4px,right 3px top 4px}}
+/* The bitmap's CSS size is its loaded pixel size divided by devicePixelRatio. */
 .lightbox-image-wrap.zoomed img{width:var(--actual-pixel-width);height:var(--actual-pixel-height);box-sizing:content-box}
+
+/* The photo owns the whole viewport; controls float over it instead of reducing its size. */
+.lightbox{width:100vw;height:100dvh;margin:0;background:#080808}
+.lightbox[open]{display:block}
+.lightbox-stage{position:absolute;inset:0;display:block;padding:clamp(18px,2.5vw,36px) clamp(22px,3.5vw,56px)}
+.lightbox-image-wrap{width:100%;height:100%}
+.lightbox-image-wrap img{width:100%;height:100%;object-fit:contain}
+.lightbox-top,.lightbox-bottom{position:absolute;z-index:2}
+.lightbox-top{inset:0 0 auto;padding:max(18px,env(safe-area-inset-top)) clamp(18px,4vw,64px) 44px;pointer-events:none;color:#ededed}
+.lightbox-top>span{opacity:0;visibility:hidden;transition:opacity .2s,visibility .2s}
+.lightbox-top button{width:44px;height:44px;padding:0;display:grid;place-items:center;flex-shrink:0;pointer-events:auto;border:0;border-radius:0;background:none;backdrop-filter:none;font-size:0;opacity:.48;transition:opacity .2s}
+.lightbox-top button span{margin:0;font-size:27px;font-weight:200;line-height:1;vertical-align:baseline}
+.lightbox-top button:hover,.lightbox-top button:focus-visible{opacity:1}
+.lightbox.controls-visible .lightbox-top{background:linear-gradient(to bottom,#080808e6 0%,#080808a8 58%,#08080800 100%)}
+.lightbox.controls-visible .lightbox-top>span{opacity:1;visibility:visible}
+.lightbox-arrow{position:absolute;z-index:3;top:50%;transform:translateY(-50%);width:48px;height:60px;border:0;border-radius:0;background:none;backdrop-filter:none;color:#f1f1f1;text-shadow:0 1px 8px #000;opacity:.5;transition:opacity .2s}
+#lightbox-prev{left:clamp(10px,2vw,30px)}
+#lightbox-next{right:clamp(10px,2vw,30px)}
+.lightbox-arrow:hover:not(:disabled),.lightbox-arrow:focus-visible{background:none;opacity:1}
+.lightbox-arrow:disabled{opacity:.2}
+.lightbox-bottom{inset:auto 0 0;grid-template-columns:minmax(0,1fr) auto;align-items:start;padding:62px clamp(20px,5vw,80px) max(26px,env(safe-area-inset-bottom));background:linear-gradient(to top,#080808ed 0%,#080808c9 62%,#08080800 100%);color:#f1f1f1}
+.lightbox-bottom h2{font-size:clamp(20px,2vw,28px)}
+.lightbox-tools{align-self:start}
+.lightbox-tools button{padding:7px 0}
+.lightbox-capture{padding-top:12px;border-top-color:#ffffff47}
+.lightbox-readout{border-left-color:#ffffff47}
+.lightbox-bottom{opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,visibility .2s}
+.lightbox.controls-visible .lightbox-bottom{opacity:1;visibility:visible;pointer-events:auto}
+.keyboard-hint{position:absolute;z-index:2;top:max(52px,calc(env(safe-area-inset-top) + 44px));left:clamp(18px,4vw,64px);padding:0;text-align:left;letter-spacing:.02em;color:#e1e1e1;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s,visibility .2s}
+.lightbox.controls-visible .keyboard-hint{opacity:.52;visibility:visible}
+.lightbox-image-wrap:not(.zoomed){cursor:pointer}
+@media(max-width:700px){
+  .lightbox-stage{padding:14px}
+  .lightbox-top{padding:max(12px,env(safe-area-inset-top)) 14px 38px}
+  .lightbox-top>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .lightbox-top button{width:36px;height:36px;padding:0}
+  .keyboard-hint{top:max(42px,calc(env(safe-area-inset-top) + 35px));left:14px;padding:0}
+  .lightbox-arrow{width:36px;height:48px;font-size:22px}
+  #lightbox-prev{left:8px}
+  #lightbox-next{right:8px}
+  .lightbox-bottom{padding:54px 16px max(18px,env(safe-area-inset-bottom));gap:10px}
+  .lightbox-bottom h2{font-size:19px}
+  .lightbox-capture{padding-top:9px}
+}
