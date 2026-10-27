@@ -59,6 +59,12 @@ test('zoo curation keeps the GRD cover and the black-and-white GRF frame last', 
     ['zoo-86ef0e5a9baa0308', 'FXN', 'digital'],
     ['zoo-d85ca138add816e2', 'GRF', 'digital'],
   ]);
+  assert.deepEqual(zoo.photos.slice(-3).map(photo => [photo.capture.aperture, photo.capture.shutter, photo.capture.iso]), [
+    ['f/1.6', '1/4950 s', '50'],
+    ['f/1.6', '1/8850 s', '64'],
+    ['f/1.6', '1/3279 s', '50'],
+  ]);
+  assert.ok(zoo.photos.slice(-3).every(photo => !('lens' in photo.capture) && !/iPhone/i.test(JSON.stringify(photo.capture))));
 });
 
 test('lightbox receives distinct capture details for each photo', () => {

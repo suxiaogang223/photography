@@ -7130,7 +7130,10 @@
         "capture": {
           "camera": "DazzCam",
           "filter": "GRD",
-          "focalLength": "35mm"
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/4950 s",
+          "iso": "50"
         },
         "width": 3000,
         "height": 2000,
@@ -7158,7 +7161,10 @@
         "capture": {
           "camera": "DazzCam",
           "filter": "FXN",
-          "focalLength": "35mm"
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/8850 s",
+          "iso": "64"
         },
         "width": 3000,
         "height": 2249,
@@ -7186,7 +7192,10 @@
         "capture": {
           "camera": "DazzCam",
           "filter": "GRF",
-          "focalLength": "35mm"
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/3279 s",
+          "iso": "50"
         },
         "width": 3000,
         "height": 2090,
