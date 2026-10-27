@@ -6339,5 +6339,308 @@
         }
       }
     ]
+  },
+  {
+    "id": "tazishan-park",
+    "title": "塔子山公园",
+    "subtitle": "TAZISHAN PARK",
+    "year": "",
+    "medium": "film",
+    "category": "胶片纪行",
+    "description": "塔楼、游乐场、气球摊与秋末的荷塘。用一卷彩色胶片，记录周六在塔子山公园散步时看到的景象。",
+    "cover": "tazishan-park-68566395892c5be6",
+    "photos": [
+      {
+        "id": "tazishan-park-528ebe13531cbd42",
+        "title": "塔子山公园 · 01",
+        "alt": "一只手伸向枝头的棕色落叶，背景是深色的树叶",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-528ebe13531cbd42-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-528ebe13531cbd42-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-528ebe13531cbd42-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-e0b45d4c43a404ea",
+        "title": "塔子山公园 · 02",
+        "alt": "穿红色上衣的女孩站在树前，举起一只手",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-e0b45d4c43a404ea-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-e0b45d4c43a404ea-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-e0b45d4c43a404ea-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-6612b680230551e3",
+        "title": "塔子山公园 · 03",
+        "alt": "石墙上一张带有装饰纹样的雕刻人脸",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 2011,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-6612b680230551e3-thumb.webp",
+            "width": 429
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-6612b680230551e3-display.webp",
+            "width": 1072
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-6612b680230551e3-large.webp",
+            "width": 2011
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-249b9c881e8dac14",
+        "title": "塔子山公园 · 04",
+        "alt": "孩子们隔着游乐场的绳网攀爬、交谈",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-249b9c881e8dac14-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-249b9c881e8dac14-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-249b9c881e8dac14-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-24ecbd531cae9efa",
+        "title": "塔子山公园 · 05",
+        "alt": "密集的绿叶与暗红色枝叶间散落着几片枯叶",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-24ecbd531cae9efa-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-24ecbd531cae9efa-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-24ecbd531cae9efa-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-7c97ab626885177f",
+        "title": "塔子山公园 · 06",
+        "alt": "公园小路旁摆满彩色卡通气球，行人从摊前经过",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-7c97ab626885177f-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-7c97ab626885177f-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-7c97ab626885177f-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-dd6803cffbceb0a7",
+        "title": "塔子山公园 · 07",
+        "alt": "树林与小屋前，一张黄色圆桌立在空地上",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-dd6803cffbceb0a7-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-dd6803cffbceb0a7-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-dd6803cffbceb0a7-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-17b696c75ed30ce8",
+        "title": "塔子山公园 · 08",
+        "alt": "荷塘里大部分荷叶已经枯萎，几片绿叶留在竹林前",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-17b696c75ed30ce8-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-17b696c75ed30ce8-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-17b696c75ed30ce8-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-fd60b7c0053b9bed",
+        "title": "塔子山公园 · 09",
+        "alt": "草地上的红蓝圆球旁，一家人站在一起",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-fd60b7c0053b9bed-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-fd60b7c0053b9bed-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-fd60b7c0053b9bed-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-68566395892c5be6",
+        "title": "塔子山公园 · 10",
+        "alt": "公园塔楼耸立在两侧的树木之间，塔下有人经过",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-68566395892c5be6-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-68566395892c5be6-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-68566395892c5be6-large.webp",
+            "width": 3000
+          }
+        ]
+      },
+      {
+        "id": "tazishan-park-68cdc2546c100715",
+        "title": "塔子山公园 · 11",
+        "alt": "广场中央一棵枝叶茂密的大树下，有人坐着休息或骑车经过",
+        "caption": "",
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "乐凯 C400"
+        },
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/tazishan-park/tazishan-park-68cdc2546c100715-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-68cdc2546c100715-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/tazishan-park/tazishan-park-68cdc2546c100715-large.webp",
+            "width": 3000
+          }
+        ]
+      }
+    ],
+    "dateRange": {
+      "start": "2026-10-24",
+      "end": "2026-10-24",
+      "source": "拍摄者提供"
+    }
   }
 ]
