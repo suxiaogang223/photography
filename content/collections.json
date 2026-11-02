@@ -7595,14 +7595,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/109 s",
           "iso": "125",
           "date": "2026-11-01T14:13",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -7627,14 +7628,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "26mm",
           "aperture": "f/1.6",
           "shutter": "1/60 s",
           "iso": "320",
           "date": "2026-11-01T14:16",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -7691,14 +7693,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/90 s",
           "iso": "125",
           "date": "2026-11-01T14:20",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -7723,14 +7726,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/60 s",
           "iso": "200",
           "date": "2026-11-01T14:22",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -7787,14 +7791,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/50 s",
           "iso": "125",
           "date": "2026-11-01T14:28",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -7883,14 +7888,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/122 s",
           "iso": "50",
           "date": "2026-11-01T15:06",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -7947,14 +7953,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/122 s",
           "iso": "40",
           "date": "2026-11-01T15:12",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -8235,14 +8242,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "35mm",
           "aperture": "f/1.6",
           "shutter": "1/174 s",
           "iso": "50",
           "date": "2026-11-01T15:53",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
@@ -8267,14 +8275,15 @@
           }
         ],
         "capture": {
-          "camera": "iPhone 17",
+          "camera": "Dazz Cam",
           "lens": "iPhone 17 back camera 5.96mm f/1.6",
           "focalLength": "49mm",
           "aperture": "f/1.6",
           "shutter": "1/377 s",
           "iso": "50",
           "date": "2026-11-01T15:55",
-          "dateSource": "exif"
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       },
       {
