@@ -2532,37 +2532,8 @@
         }
       },
       {
-        "id": "erdaohai-film-67e15b1547851b21",
-        "title": "二道海胶片 · 05",
-        "alt": "树林间的草地与远处山坡",
-        "caption": "",
-        "width": 3000,
-        "height": 1996,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-67e15b1547851b21-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-67e15b1547851b21-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-67e15b1547851b21-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
         "id": "erdaohai-film-46429de9f6945ad6",
-        "title": "二道海胶片 · 06",
+        "title": "二道海胶片 · 05",
         "alt": "山林与蓝天，画面右侧带有橙黄色漏光",
         "caption": "",
         "width": 3000,
@@ -2591,7 +2562,7 @@
       },
       {
         "id": "erdaohai-film-55854183470292ec",
-        "title": "二道海胶片 · 07",
+        "title": "二道海胶片 · 06",
         "alt": "森林前的开阔草地",
         "caption": "",
         "width": 3000,
@@ -2620,7 +2591,7 @@
       },
       {
         "id": "erdaohai-film-b9e4caa1e198b07f",
-        "title": "二道海胶片 · 08",
+        "title": "二道海胶片 · 07",
         "alt": "远处山谷与层层树林",
         "caption": "",
         "width": 3000,
@@ -2649,7 +2620,7 @@
       },
       {
         "id": "erdaohai-film-3457f3ff51b139d8",
-        "title": "二道海胶片 · 09",
+        "title": "二道海胶片 · 08",
         "alt": "覆着青苔的树根与林地",
         "caption": "",
         "width": 3000,
@@ -2677,37 +2648,8 @@
         }
       },
       {
-        "id": "erdaohai-film-713ebf816294e383",
-        "title": "二道海胶片 · 10",
-        "alt": "林间开阔草地与远处树林",
-        "caption": "",
-        "width": 3000,
-        "height": 2007,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-713ebf816294e383-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-713ebf816294e383-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-713ebf816294e383-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
         "id": "erdaohai-film-bf1e96197fd4efa2",
-        "title": "二道海胶片 · 11",
+        "title": "二道海胶片 · 09",
         "alt": "柔和光线下的草地与树林",
         "caption": "",
         "width": 3000,
@@ -2736,7 +2678,7 @@
       },
       {
         "id": "erdaohai-film-69e55298cdf40c8d",
-        "title": "二道海胶片 · 12",
+        "title": "二道海胶片 · 10",
         "alt": "蓝黄色调中的山林轮廓与胶片漏光",
         "caption": "",
         "width": 3000,
@@ -2765,7 +2707,7 @@
       },
       {
         "id": "erdaohai-film-c54b31d452c45d5e",
-        "title": "二道海胶片 · 13",
+        "title": "二道海胶片 · 11",
         "alt": "林间山坡与稀疏云层",
         "caption": "",
         "width": 3000,
@@ -2793,66 +2735,8 @@
         }
       },
       {
-        "id": "erdaohai-film-f81cf3e0c568b677",
-        "title": "二道海胶片 · 14",
-        "alt": "林地中的树干、青苔与低矮植物",
-        "caption": "",
-        "width": 3000,
-        "height": 1996,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-f81cf3e0c568b677-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-f81cf3e0c568b677-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-f81cf3e0c568b677-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
-        "id": "erdaohai-film-82fdd26b905fbbb4",
-        "title": "二道海胶片 · 15",
-        "alt": "山坡上的树林与浅色天空",
-        "caption": "",
-        "width": 3000,
-        "height": 2007,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-82fdd26b905fbbb4-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-82fdd26b905fbbb4-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-82fdd26b905fbbb4-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
         "id": "erdaohai-film-762ded53c05d800e",
-        "title": "二道海胶片 · 16",
+        "title": "二道海胶片 · 12",
         "alt": "树木之间显露的山坡与林间通道",
         "caption": "",
         "width": 2007,
@@ -2881,7 +2765,7 @@
       },
       {
         "id": "erdaohai-film-196b2eb32ed2afc1",
-        "title": "二道海胶片 · 17",
+        "title": "二道海胶片 · 13",
         "alt": "林间台阶旁穿浅色衣服的人",
         "caption": "",
         "width": 3000,
@@ -2910,7 +2794,7 @@
       },
       {
         "id": "erdaohai-film-d2ece9992bf867f1",
-        "title": "二道海胶片 · 18",
+        "title": "二道海胶片 · 14",
         "alt": "树梢上方的山坡与斜射光线",
         "caption": "",
         "width": 3000,
@@ -2939,7 +2823,7 @@
       },
       {
         "id": "erdaohai-film-e5942143d2e241cf",
-        "title": "二道海胶片 · 19",
+        "title": "二道海胶片 · 15",
         "alt": "山林、天空与画面左侧的暖色漏光",
         "caption": "",
         "width": 3000,
@@ -2968,7 +2852,7 @@
       },
       {
         "id": "erdaohai-film-e77920a9b925e10d",
-        "title": "二道海胶片 · 20",
+        "title": "二道海胶片 · 16",
         "alt": "林间小径旁的针叶树",
         "caption": "",
         "width": 2007,
@@ -2997,7 +2881,7 @@
       },
       {
         "id": "erdaohai-film-527d57fbe2c77aa4",
-        "title": "二道海胶片 · 21",
+        "title": "二道海胶片 · 17",
         "alt": "树干上悬挂的橙色救生圈",
         "caption": "",
         "width": 3000,
@@ -3025,37 +2909,8 @@
         }
       },
       {
-        "id": "erdaohai-film-7ebe715325ac35e0",
-        "title": "二道海胶片 · 22",
-        "alt": "高大针叶树与天空中的云",
-        "caption": "",
-        "width": 3000,
-        "height": 1996,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-7ebe715325ac35e0-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-7ebe715325ac35e0-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-7ebe715325ac35e0-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
         "id": "erdaohai-film-bd9f693943b3423d",
-        "title": "二道海胶片 · 23",
+        "title": "二道海胶片 · 18",
         "alt": "山谷两侧的森林与中间草地",
         "caption": "",
         "width": 3000,
@@ -3084,7 +2939,7 @@
       },
       {
         "id": "erdaohai-film-688e9451c4b66f2e",
-        "title": "二道海胶片 · 24",
+        "title": "二道海胶片 · 19",
         "alt": "深蓝天空中的白云",
         "caption": "",
         "width": 3000,
@@ -3113,7 +2968,7 @@
       },
       {
         "id": "erdaohai-film-ea4ba4c888daf97e",
-        "title": "二道海胶片 · 25",
+        "title": "二道海胶片 · 20",
         "alt": "森林之间的绿色湖水与岸边草地",
         "caption": "",
         "width": 3000,
@@ -3142,7 +2997,7 @@
       },
       {
         "id": "erdaohai-film-57353e238bfbb815",
-        "title": "二道海胶片 · 26",
+        "title": "二道海胶片 · 21",
         "alt": "木质台阶旁站立的人与树林",
         "caption": "",
         "width": 3000,
@@ -3171,7 +3026,7 @@
       },
       {
         "id": "erdaohai-film-ffe838afed8f3b74",
-        "title": "二道海胶片 · 27",
+        "title": "二道海胶片 · 22",
         "alt": "湖边救生圈与栈道上的游客",
         "caption": "",
         "width": 3000,
@@ -3199,37 +3054,8 @@
         }
       },
       {
-        "id": "erdaohai-film-6ccecf6aea67541a",
-        "title": "二道海胶片 · 28",
-        "alt": "山坡前密集的针叶树林",
-        "caption": "",
-        "width": 3000,
-        "height": 2007,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-6ccecf6aea67541a-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-6ccecf6aea67541a-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-6ccecf6aea67541a-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
         "id": "erdaohai-film-ca682cfc2a297357",
-        "title": "二道海胶片 · 29",
+        "title": "二道海胶片 · 23",
         "alt": "近处枝叶间透出的光线",
         "caption": "",
         "width": 3000,
@@ -3258,7 +3084,7 @@
       },
       {
         "id": "erdaohai-film-9cf7c6dbcf559d3a",
-        "title": "二道海胶片 · 30",
+        "title": "二道海胶片 · 24",
         "alt": "湖畔草木与浅色水面",
         "caption": "",
         "width": 3000,
@@ -3287,7 +3113,7 @@
       },
       {
         "id": "erdaohai-film-04eda0e6522dbfb8",
-        "title": "二道海胶片 · 31",
+        "title": "二道海胶片 · 25",
         "alt": "山谷中的草地、树林与远处游客",
         "caption": "",
         "width": 3000,
@@ -3316,7 +3142,7 @@
       },
       {
         "id": "erdaohai-film-a7e963faf65147bd",
-        "title": "二道海胶片 · 32",
+        "title": "二道海胶片 · 26",
         "alt": "浅色湖岸与绿色湖水",
         "caption": "",
         "width": 3000,
@@ -3345,7 +3171,7 @@
       },
       {
         "id": "erdaohai-film-ab3d702a69101acb",
-        "title": "二道海胶片 · 33",
+        "title": "二道海胶片 · 27",
         "alt": "蓝天中高低交叠的云层",
         "caption": "",
         "width": 3000,
@@ -3374,7 +3200,7 @@
       },
       {
         "id": "erdaohai-film-10b3b60344b08014",
-        "title": "二道海胶片 · 34",
+        "title": "二道海胶片 · 28",
         "alt": "栈道旁的小型建筑与游客",
         "caption": "",
         "width": 3000,
@@ -3403,7 +3229,7 @@
       },
       {
         "id": "erdaohai-film-7f4654b0478d8c4e",
-        "title": "二道海胶片 · 35",
+        "title": "二道海胶片 · 29",
         "alt": "远处树林前的开阔草地",
         "caption": "",
         "width": 3000,
@@ -3432,7 +3258,7 @@
       },
       {
         "id": "erdaohai-film-e042bf62261a1075",
-        "title": "二道海胶片 · 36",
+        "title": "二道海胶片 · 30",
         "alt": "溪流中的石块、游客与胶片漏光",
         "caption": "",
         "width": 3000,
@@ -3461,7 +3287,7 @@
       },
       {
         "id": "erdaohai-film-03f0c722af87566c",
-        "title": "二道海胶片 · 37",
+        "title": "二道海胶片 · 31",
         "alt": "木廊下休息的人与斜射阳光",
         "caption": "",
         "width": 3000,
@@ -3489,37 +3315,8 @@
         }
       },
       {
-        "id": "erdaohai-film-acf7897d4061e606",
-        "title": "二道海胶片 · 38",
-        "alt": "青苔覆盖的树根与地面植物",
-        "caption": "",
-        "width": 3000,
-        "height": 2007,
-        "variants": [
-          {
-            "src": "media/erdaohai-film/erdaohai-film-acf7897d4061e606-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-acf7897d4061e606-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/erdaohai-film/erdaohai-film-acf7897d4061e606-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Ricoh Elnica 35",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "40mm",
-          "date": "2026-09-28",
-          "dateSource": "series"
-        }
-      },
-      {
         "id": "erdaohai-film-e4a234c3f1eaeafc",
-        "title": "二道海胶片 · 39",
+        "title": "二道海胶片 · 32",
         "alt": "木栈道上的落叶与边缘绿植",
         "caption": "",
         "width": 3000,
@@ -3548,7 +3345,7 @@
       },
       {
         "id": "erdaohai-film-4a589c990051b0d6",
-        "title": "二道海胶片 · 40",
+        "title": "二道海胶片 · 33",
         "alt": "树林间的湖水与岸边草地",
         "caption": "",
         "width": 3000,
@@ -3577,7 +3374,7 @@
       },
       {
         "id": "erdaohai-film-83c0bd156840b8e6",
-        "title": "二道海胶片 · 41",
+        "title": "二道海胶片 · 34",
         "alt": "高大树木、山坡与浅色天空",
         "caption": "",
         "width": 3000,
@@ -3606,7 +3403,7 @@
       },
       {
         "id": "erdaohai-film-131cba1b2bf84cbf",
-        "title": "二道海胶片 · 42",
+        "title": "二道海胶片 · 35",
         "alt": "木栈道旁交谈的两位游客",
         "caption": "",
         "width": 3000,
@@ -3635,7 +3432,7 @@
       },
       {
         "id": "erdaohai-film-f3f09b733a63a9e8",
-        "title": "二道海胶片 · 43",
+        "title": "二道海胶片 · 36",
         "alt": "穿过树木之间的木质栈道",
         "caption": "",
         "width": 3000,
@@ -3667,8 +3464,8 @@
       "start": "2026-09-28",
       "end": "2026-09-28",
       "source": "EXIF DateTimeOriginal",
-      "datedPhotos": 43,
-      "totalPhotos": 43
+      "datedPhotos": 36,
+      "totalPhotos": 36
     }
   },
   {
