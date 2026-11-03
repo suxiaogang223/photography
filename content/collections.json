@@ -8059,8 +8059,40 @@
         }
       },
       {
-        "id": "color-city-826499b156f618fb",
+        "id": "color-city-bf9d67b970958b8e",
         "title": "ColorCity 扫街 · 17",
+        "alt": "教堂前的白色圣像、花坛和路过的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/color-city/color-city-bf9d67b970958b8e-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/color-city/color-city-bf9d67b970958b8e-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/color-city/color-city-bf9d67b970958b8e-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/5",
+          "shutter": "1/250 s",
+          "iso": "450",
+          "date": "2026-11-01T15:37",
+          "dateSource": "exif"
+        }
+      },
+      {
+        "id": "color-city-826499b156f618fb",
+        "title": "ColorCity 扫街 · 18",
         "alt": "教堂立面前张开双手的白色圣像",
         "caption": "",
         "width": 3000,
@@ -8092,7 +8124,7 @@
       },
       {
         "id": "color-city-58845a798ad1d1f1",
-        "title": "ColorCity 扫街 · 18",
+        "title": "ColorCity 扫街 · 19",
         "alt": "绿色草地和石板间的红色消防栓",
         "caption": "",
         "width": 3000,
@@ -8124,7 +8156,7 @@
       },
       {
         "id": "color-city-f5a6817762feb15a",
-        "title": "ColorCity 扫街 · 19",
+        "title": "ColorCity 扫街 · 20",
         "alt": "深色木门前悬挂的一把白色雨伞",
         "caption": "",
         "width": 2000,
@@ -8156,7 +8188,7 @@
       },
       {
         "id": "color-city-9c8afc9daffb5327",
-        "title": "ColorCity 扫街 · 20",
+        "title": "ColorCity 扫街 · 21",
         "alt": "庭院里的石子路、盆栽与屋檐",
         "caption": "",
         "width": 2000,
@@ -8189,7 +8221,7 @@
       },
       {
         "id": "color-city-16b603943627c4b2",
-        "title": "ColorCity 扫街 · 21",
+        "title": "ColorCity 扫街 · 22",
         "alt": "斑驳墙面上的蓝色门牌与红色禁止驶入标志",
         "caption": "",
         "width": 1999,
@@ -8218,38 +8250,6 @@
           "date": "2026-11-01T15:55",
           "dateSource": "exif",
           "filter": "GRD"
-        }
-      },
-      {
-        "id": "color-city-77c24bb743176dc7",
-        "title": "ColorCity 扫街 · 22",
-        "alt": "绿树下围着小桌喝茶交谈的人",
-        "caption": "",
-        "width": 3000,
-        "height": 2000,
-        "variants": [
-          {
-            "src": "media/color-city/color-city-77c24bb743176dc7-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/color-city/color-city-77c24bb743176dc7-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/color-city/color-city-77c24bb743176dc7-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "NIKON Z fc",
-          "lens": "TTArtisan Z 23mm f/1.8 S",
-          "focalLength": "34mm",
-          "aperture": "f/4",
-          "shutter": "1/250 s",
-          "iso": "4000",
-          "date": "2026-11-01T16:22",
-          "dateSource": "exif"
         }
       },
       {
@@ -8285,40 +8285,8 @@
         }
       },
       {
-        "id": "color-city-d772455d85f68d89",
-        "title": "ColorCity 扫街 · 24",
-        "alt": "石景和溪水边站着的孩子与粉色水桶",
-        "caption": "",
-        "width": 2000,
-        "height": 3000,
-        "variants": [
-          {
-            "src": "media/color-city/color-city-d772455d85f68d89-thumb.webp",
-            "width": 427
-          },
-          {
-            "src": "media/color-city/color-city-d772455d85f68d89-display.webp",
-            "width": 1067
-          },
-          {
-            "src": "media/color-city/color-city-d772455d85f68d89-large.webp",
-            "width": 2000
-          }
-        ],
-        "capture": {
-          "camera": "NIKON Z fc",
-          "lens": "TTArtisan Z 23mm f/1.8 S",
-          "focalLength": "34mm",
-          "aperture": "f/1.8",
-          "shutter": "1/250 s",
-          "iso": "1100",
-          "date": "2026-11-01T16:26",
-          "dateSource": "exif"
-        }
-      },
-      {
         "id": "color-city-0fd78cd959307d2d",
-        "title": "ColorCity 扫街 · 25",
+        "title": "ColorCity 扫街 · 24",
         "alt": "公园里一起玩耍的孩子与大人",
         "caption": "",
         "width": 2000,
@@ -8346,6 +8314,39 @@
           "iso": "800",
           "date": "2026-11-01T16:26",
           "dateSource": "exif"
+        }
+      },
+      {
+        "id": "color-city-529973861d3d68bc",
+        "title": "ColorCity 扫街 · 25",
+        "alt": "圆形花盆、修剪整齐的绿植与街边行人",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/color-city/color-city-529973861d3d68bc-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/color-city/color-city-529973861d3d68bc-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/color-city/color-city-529973861d3d68bc-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/122 s",
+          "iso": "100",
+          "date": "2026-11-01T16:50",
+          "dateSource": "exif",
+          "filter": "GRD"
         }
       }
     ],
