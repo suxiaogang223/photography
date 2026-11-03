@@ -9,40 +9,8 @@
     "cover": "mid-autumn-streets-89c9d99d5f27ef41",
     "photos": [
       {
-        "id": "mid-autumn-streets-52e4618a73f75173",
-        "title": "中秋节扫街 · 01",
-        "alt": "路口站立的黄头盔行人与旁边的自行车、骑手",
-        "caption": "",
-        "width": 3000,
-        "height": 2005,
-        "variants": [
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-52e4618a73f75173-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-52e4618a73f75173-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-52e4618a73f75173-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "NIKON Z fc",
-          "lens": "TTArtisan Z 23mm f/1.8 S",
-          "focalLength": "34mm",
-          "aperture": "f/1.8",
-          "shutter": "1/2500 s",
-          "iso": "200",
-          "date": "2026-09-25T14:59",
-          "dateSource": "exif"
-        }
-      },
-      {
         "id": "mid-autumn-streets-97739af8dd5ab1f9",
-        "title": "中秋节扫街 · 02",
+        "title": "中秋节扫街 · 01",
         "alt": "骑自行车的人穿过街道",
         "caption": "",
         "width": 3000,
@@ -74,7 +42,7 @@
       },
       {
         "id": "mid-autumn-streets-c8930018358d8811",
-        "title": "中秋节扫街 · 03",
+        "title": "中秋节扫街 · 02",
         "alt": "白色建筑外墙与墙前的绿色草地",
         "caption": "",
         "width": 3000,
@@ -106,7 +74,7 @@
       },
       {
         "id": "mid-autumn-streets-e569fe12ed893992",
-        "title": "中秋节扫街 · 04",
+        "title": "中秋节扫街 · 03",
         "alt": "树荫下并排的两台户外健身器械",
         "caption": "",
         "width": 3000,
@@ -138,7 +106,7 @@
       },
       {
         "id": "mid-autumn-streets-432f290894e03ccc",
-        "title": "中秋节扫街 · 05",
+        "title": "中秋节扫街 · 04",
         "alt": "花木之间延伸的黄色廊架",
         "caption": "",
         "width": 3000,
@@ -170,7 +138,7 @@
       },
       {
         "id": "mid-autumn-streets-67aec1aa08fb020b",
-        "title": "中秋节扫街 · 06",
+        "title": "中秋节扫街 · 05",
         "alt": "遮阳棚下的街边店铺与桌椅",
         "caption": "",
         "width": 3000,
@@ -202,7 +170,7 @@
       },
       {
         "id": "mid-autumn-streets-21eb304f50a398ab",
-        "title": "中秋节扫街 · 07",
+        "title": "中秋节扫街 · 06",
         "alt": "黄色叉车车身上的文字与卡通贴纸",
         "caption": "",
         "width": 3000,
@@ -234,7 +202,7 @@
       },
       {
         "id": "mid-autumn-streets-40aaf1c9e39a2de9",
-        "title": "中秋节扫街 · 08",
+        "title": "中秋节扫街 · 07",
         "alt": "围栏后的挖掘机与车身图案",
         "caption": "",
         "width": 3000,
@@ -266,7 +234,7 @@
       },
       {
         "id": "mid-autumn-streets-d7174dcf41baf478",
-        "title": "中秋节扫街 · 09",
+        "title": "中秋节扫街 · 08",
         "alt": "红白墙面前的电线杆与上方交错的电线",
         "caption": "",
         "width": 1746,
@@ -298,7 +266,7 @@
       },
       {
         "id": "mid-autumn-streets-89c9d99d5f27ef41",
-        "title": "中秋节扫街 · 10",
+        "title": "中秋节扫街 · 09",
         "alt": "穿黄衣的行人与红墙前的人群交错",
         "caption": "",
         "width": 3000,
@@ -330,7 +298,7 @@
       },
       {
         "id": "mid-autumn-streets-6caf5c63bdef7d53",
-        "title": "中秋节扫街 · 11",
+        "title": "中秋节扫街 · 10",
         "alt": "光照下的路面与拉长的人影",
         "caption": "",
         "width": 3000,
@@ -362,7 +330,7 @@
       },
       {
         "id": "mid-autumn-streets-deaf386691800920",
-        "title": "中秋节扫街 · 12",
+        "title": "中秋节扫街 · 11",
         "alt": "街边圆桌、杂物与桌旁的人",
         "caption": "",
         "width": 3000,
@@ -394,7 +362,7 @@
       },
       {
         "id": "mid-autumn-streets-c8a6f8f1d0c20e50",
-        "title": "中秋节扫街 · 13",
+        "title": "中秋节扫街 · 12",
         "alt": "停在街边的红色三轮车",
         "caption": "",
         "width": 3000,
@@ -426,7 +394,7 @@
       },
       {
         "id": "mid-autumn-streets-5153c2067eeb51e7",
-        "title": "中秋节扫街 · 14",
+        "title": "中秋节扫街 · 13",
         "alt": "绿色栏杆后的卡通人物图案",
         "caption": "",
         "width": 3000,
@@ -457,72 +425,8 @@
         }
       },
       {
-        "id": "mid-autumn-streets-647021578879ecca",
-        "title": "中秋节扫街 · 15",
-        "alt": "树荫下的街道与远处建筑",
-        "caption": "",
-        "width": 2817,
-        "height": 3000,
-        "variants": [
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-647021578879ecca-thumb.webp",
-            "width": 601
-          },
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-647021578879ecca-display.webp",
-            "width": 1503
-          },
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-647021578879ecca-large.webp",
-            "width": 2817
-          }
-        ],
-        "capture": {
-          "camera": "NIKON Z fc",
-          "lens": "TTArtisan Z 23mm f/1.8 S",
-          "focalLength": "34mm",
-          "aperture": "f/5.6",
-          "shutter": "1/250 s",
-          "iso": "450",
-          "date": "2026-09-25T18:11",
-          "dateSource": "exif"
-        }
-      },
-      {
-        "id": "mid-autumn-streets-fda52410c0ef8d7e",
-        "title": "中秋节扫街 · 16",
-        "alt": "街边被黄色布料覆盖的货物与木架",
-        "caption": "",
-        "width": 3000,
-        "height": 2000,
-        "variants": [
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-fda52410c0ef8d7e-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-fda52410c0ef8d7e-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/mid-autumn-streets/mid-autumn-streets-fda52410c0ef8d7e-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "NIKON Z fc",
-          "lens": "TTArtisan Z 23mm f/1.8 S",
-          "focalLength": "34mm",
-          "aperture": "f/5.6",
-          "shutter": "1/250 s",
-          "iso": "6400",
-          "date": "2026-09-25T18:13",
-          "dateSource": "exif"
-        }
-      },
-      {
         "id": "mid-autumn-streets-321d6f0debda926f",
-        "title": "中秋节扫街 · 17",
+        "title": "中秋节扫街 · 14",
         "alt": "店铺门口的竹帘、桌面与椅子",
         "caption": "",
         "width": 2760,
@@ -554,7 +458,7 @@
       },
       {
         "id": "mid-autumn-streets-579653f9624f9f0b",
-        "title": "中秋节扫街 · 18",
+        "title": "中秋节扫街 · 15",
         "alt": "街边店铺前的人群与工具",
         "caption": "",
         "width": 3000,
@@ -586,7 +490,7 @@
       },
       {
         "id": "mid-autumn-streets-b9aac43442b38726",
-        "title": "中秋节扫街 · 19",
+        "title": "中秋节扫街 · 16",
         "alt": "店铺前交谈的人与手推车",
         "caption": "",
         "width": 3000,
@@ -618,7 +522,7 @@
       },
       {
         "id": "mid-autumn-streets-355618ea6944ad92",
-        "title": "中秋节扫街 · 20",
+        "title": "中秋节扫街 · 17",
         "alt": "街边人像雕塑与周围的日常物件",
         "caption": "",
         "width": 2539,
@@ -650,7 +554,7 @@
       },
       {
         "id": "mid-autumn-streets-70965438cc11f1e7",
-        "title": "中秋节扫街 · 21",
+        "title": "中秋节扫街 · 18",
         "alt": "趴在座椅上的黑白猫",
         "caption": "",
         "width": 3000,
@@ -682,7 +586,7 @@
       },
       {
         "id": "mid-autumn-streets-3c6d2a696237e8d2",
-        "title": "中秋节扫街 · 22",
+        "title": "中秋节扫街 · 19",
         "alt": "施工围挡前坐着的人与推车",
         "caption": "",
         "width": 3000,
@@ -714,7 +618,7 @@
       },
       {
         "id": "mid-autumn-streets-2bf343cb0fdbdde9",
-        "title": "中秋节扫街 · 23",
+        "title": "中秋节扫街 · 20",
         "alt": "载满袋装货物的三轮车",
         "caption": "",
         "width": 2719,
@@ -746,7 +650,7 @@
       },
       {
         "id": "mid-autumn-streets-a8bcdb1b234d797f",
-        "title": "中秋节扫街 · 24",
+        "title": "中秋节扫街 · 21",
         "alt": "树旁的黄色自行车与弯曲小径",
         "caption": "",
         "width": 3000,
@@ -778,7 +682,7 @@
       },
       {
         "id": "mid-autumn-streets-30580e975a8f6477",
-        "title": "中秋节扫街 · 25",
+        "title": "中秋节扫街 · 22",
         "alt": "路边墙面、树根与绿植",
         "caption": "",
         "width": 3000,
@@ -810,7 +714,7 @@
       },
       {
         "id": "mid-autumn-streets-45a5aeb0fc8bf9ac",
-        "title": "中秋节扫街 · 26",
+        "title": "中秋节扫街 · 23",
         "alt": "住宅楼之间的街道与黄色车辆",
         "caption": "",
         "width": 3000,
@@ -842,7 +746,7 @@
       },
       {
         "id": "mid-autumn-streets-6f259321d55b9ed2",
-        "title": "中秋节扫街 · 27",
+        "title": "中秋节扫街 · 24",
         "alt": "桌面上的粉色衣架与后方栏杆",
         "caption": "",
         "width": 3000,
@@ -874,7 +778,7 @@
       },
       {
         "id": "mid-autumn-streets-681f8bea4237ae00",
-        "title": "中秋节扫街 · 28",
+        "title": "中秋节扫街 · 25",
         "alt": "菜摊前的蔬菜与顾客",
         "caption": "",
         "width": 3000,
@@ -906,7 +810,7 @@
       },
       {
         "id": "mid-autumn-streets-1a970aeb6bd558c2",
-        "title": "中秋节扫街 · 29",
+        "title": "中秋节扫街 · 26",
         "alt": "夜间店铺前交谈的人与门口的灯光",
         "caption": "",
         "width": 3000,
@@ -938,7 +842,7 @@
       },
       {
         "id": "mid-autumn-streets-bb6586d30b7b7d66",
-        "title": "中秋节扫街 · 30",
+        "title": "中秋节扫街 · 27",
         "alt": "夜间摊位上的锅具、蒸汽与忙碌的人",
         "caption": "",
         "width": 3000,
@@ -973,8 +877,8 @@
       "start": "2026-09-25",
       "end": "2026-09-25",
       "source": "EXIF DateTimeOriginal",
-      "datedPhotos": 30,
-      "totalPhotos": 30
+      "datedPhotos": 27,
+      "totalPhotos": 27
     },
     "medium": "digital"
   },
