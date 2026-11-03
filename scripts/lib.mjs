@@ -27,6 +27,10 @@ export function validateContent(site, collections) {
     const url = new URL(site[key]);
     if (url.protocol !== 'https:' || url.username || url.password || url.search || url.hash) throw new Error(`site.${key} 必须是无参数的 HTTPS 地址。`);
   }
+  if (site.cloudflareAnalyticsToken !== undefined && site.cloudflareAnalyticsToken !== ''
+    && (typeof site.cloudflareAnalyticsToken !== 'string' || !/^[a-f0-9]{32}$/i.test(site.cloudflareAnalyticsToken))) {
+    throw new Error('site.cloudflareAnalyticsToken 必须是 Cloudflare Web Analytics 的 32 位十六进制站点 token，或留空关闭统计。');
+  }
   if (!Array.isArray(collections)) throw new Error('作品清单必须是数组。');
   if (site.portrait !== undefined) {
     const portrait = site.portrait;

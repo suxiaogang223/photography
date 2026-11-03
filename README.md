@@ -23,6 +23,14 @@ npm run check
 
 检查命令运行自动化测试并构建到 `dist/`。测试使用临时目录，不修改真实作品清单。`dist/` 是可重建的输出，不应手工编辑或提交。
 
+## 访问统计
+
+网站继续使用 GitHub Pages 托管，通过 Cloudflare Web Analytics 官方脚本记录访问情况。在 `content/site.json` 中设置 `cloudflareAnalyticsToken` 后，构建会为首页、索引、关于、系列与 404 页面各加入一次统计脚本；将该字段留空或删除即可关闭。
+
+Cloudflare Web Analytics 的站点主机名应设置为 `suxiaogang223.github.io`，不含协议或 `/photography/` 路径。脚本只加入这个摄影集项目，博客页面不会因此自动启用统计。该 token 是公开的统计站点标识，不是 Cloudflare 账号 API 密钥。
+
+统计通过异步模块脚本加载，不阻塞网页解析。浏览器拦截插件或网络故障可能导致漏报，访问统计不能替代 GitHub Pages 月度流量用量。验证时打开线上页面并切换到其他标签页，在开发者工具 Network 中检查 `beacon.min.js` 加载与发送至 `cloudflareinsights.com/cdn-cgi/rum` 的请求；Cloudflare 控制台的数据可能延迟几分钟出现。本地主机名与控制台配置不符，不应用于验证统计入库。
+
 ## 照片冲洗
 
 在灯箱中点击“冲洗照片”，先预览带纸边的照片，再选择“保存冲洗照片”。照片保持完整画幅；该张照片的标题、相机、胶卷或滤镜、焦段、曝光参数与日期印在纸边，底部用浅暖灰色添加姓名和网址，不覆盖画面。浏览器在本地生成 JPEG，不向额外服务上传照片。

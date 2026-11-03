@@ -50,6 +50,26 @@ test('live collections and their image files remain valid independently of sampl
   }
 });
 
+test('analytics is optional and appears once on every page when configured', () => {
+  const token = '0123456789abcdef0123456789abcdef';
+  const configured = { ...example, site: { ...example.site, cloudflareAnalyticsToken: token } };
+  validateContent(configured.site, configured.collections);
+  for (const page of renderSite(configured).values()) {
+    const scripts = [...page.matchAll(/<script type="module" src="https:\/\/static\.cloudflareinsights\.com\/beacon\.min\.js" data-cf-beacon="([^"]+)"><\/script>/g)];
+    assert.equal(scripts.length, 1);
+    assert.deepEqual(JSON.parse(scripts[0][1].replaceAll('&quot;', '"')), { token });
+    assert.ok(page.indexOf(scripts[0][0]) < page.indexOf('</body>'));
+  }
+  for (const value of [undefined, '']) {
+    for (const page of renderSite({ ...example, site: { ...example.site, cloudflareAnalyticsToken: value } }).values()) {
+      assert.doesNotMatch(page, /cloudflareinsights\.com/);
+    }
+  }
+  for (const value of ['invalid-token', {}, null]) {
+    assert.throws(() => validateContent({ ...example.site, cloudflareAnalyticsToken: value }, example.collections), /cloudflareAnalyticsToken/);
+  }
+});
+
 test('published photos have complete dates at the precision appropriate to each medium', async () => {
   const { collections } = await loadContent();
   validatePublishedDates(collections);
