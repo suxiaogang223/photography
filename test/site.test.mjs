@@ -7,7 +7,8 @@ import sharp from 'sharp';
 import { ROOT, loadContent, validateContent, validatePublishedDates, normalizeBase, mediaUrl } from '../scripts/lib.mjs';
 import { renderSite, buildSite } from '../scripts/build.mjs';
 import { importPhotos } from '../scripts/import-photos.mjs';
-import { printLayout } from '../src/print.js';
+import { printLayout, wrapPrintCaption } from '../src/print.js';
+import { photoCaption } from '../src/photo-caption.js';
 import { photoMetadata, photoMedium, datePrecision } from '../src/photo-metadata.js';
 
 const example = {
@@ -163,6 +164,50 @@ test('photo print keeps every pixel and labels each photo from its own capture d
   const page = renderSite(example).get('index.html');
   assert.match(page, /id="lightbox-print" type="button">冲洗照片<\/button>/);
   assert.match(page, /id="print-dialog" class="print-dialog"/);
+});
+
+test('optional photo text preserves paragraphs, escapes HTML and leaves empty photos unchanged', () => {
+  const modified = structuredClone(example);
+  modified.collections[0].photos.forEach(photo => { delete photo.placeholder; photo.caption = ''; });
+  modified.collections[0].photos[0].caption = '  第一行。\r\n\r\n第二行 <script> & 结尾。  ';
+  modified.collections[0].photos[1].caption = ' \n ';
+  const text = '第一行。\n\n第二行 <script> & 结尾。';
+  assert.equal(photoCaption(modified.collections[0].photos[0]), text);
+  assert.equal(photoCaption(modified.collections[0].photos[1]), '');
+  const pages = renderSite(modified);
+  const series = pages.get('series/ordinary-light/index.html');
+  assert.equal((series.match(/class="photo-caption"/g) || []).length, 1);
+  assert.ok(series.includes('第一行。\n\n第二行 &lt;script&gt; &amp; 结尾。'));
+  assert.doesNotMatch(pages.get('index/index.html'), /class="photo-caption"/);
+  const runtime = JSON.parse(series.match(/<script id="gallery-data" type="application\/json">(.*?)<\/script>/s)[1]);
+  assert.equal(photoCaption(runtime.photos.find(photo => photo.id === 'light-01')), text);
+  assert.throws(() => validateContent(modified.site, [{ ...modified.collections[0], photos: [{ ...modified.collections[0].photos[0], caption: {} }] }]), /照片文字/);
+});
+
+test('print text wraps complete Chinese, English and emoji paragraphs without reducing the photograph', () => {
+  const text = '保留完整的照片，也保留写下的话。\n\nA small pause 👨‍👩‍👧‍👦, and a verylongwordthatmustwrap.';
+  const segmenter = new Intl.Segmenter('zh', { granularity: 'grapheme' });
+  const measure = value => [...segmenter.segment(value)].length;
+  const lines = wrapPrintCaption(text, 12, measure);
+  assert.ok(lines.includes(''));
+  assert.ok(lines.every(line => measure(line) <= 12));
+  assert.equal(lines.join('').replace(/\s/g, ''), text.replace(/\s/g, ''));
+  assert.ok(lines.some(line => line.includes('👨‍👩‍👧‍👦')));
+  const punctuation = wrapPrintCaption('照片中的自然分段，在灯箱中可以展开阅读。「保留写下的话」。abcdefghijklmnopqrst。', 8, measure);
+  assert.ok(punctuation.every(line => !/^[，。、！？；：）》】」』,.!?;:]/u.test(line)));
+  assert.ok(punctuation.every(line => !/[（《【「『]$/u.test(line)));
+  assert.equal(punctuation.join(''), '照片中的自然分段，在灯箱中可以展开阅读。「保留写下的话」。abcdefghijklmnopqrst。');
+  assert.deepEqual(wrapPrintCaption('', 12, measure), []);
+  for (const [width, height] of [[3000, 2000], [2000, 3000]]) {
+    const plain = printLayout(width, height);
+    const captioned = printLayout(width, height, 240);
+    assert.deepEqual(plain, printLayout(width, height, 0));
+    assert.deepEqual(captioned.photo, plain.photo);
+    assert.deepEqual(captioned.columns, plain.columns);
+    assert.equal(captioned.width, plain.width);
+    assert.equal(captioned.height, plain.height + 240);
+  }
+  assert.throws(() => printLayout(3000, 2000, -1));
 });
 
 test('a digital photo inside a film series keeps its own medium and no film frame', () => {

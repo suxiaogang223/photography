@@ -1,5 +1,6 @@
 import { photoMetadata } from './photo-metadata.js';
 import { renderPrint } from './print.js';
+import { photoCaption } from './photo-caption.js';
 
 const data = JSON.parse(document.querySelector('#gallery-data').textContent);
 const dialog = document.querySelector('.lightbox');
@@ -22,6 +23,8 @@ const captureMedium = document.querySelector('#lightbox-medium');
 const captureReadout = document.querySelector('#lightbox-readout');
 const captureExposure = document.querySelector('#lightbox-exposure');
 const captureDate = document.querySelector('#lightbox-date');
+const caption = document.querySelector('#lightbox-caption');
+const captionToggle = document.querySelector('#lightbox-caption-toggle');
 let selection = [];
 let position = 0;
 let returnFocus = null;
@@ -68,6 +71,19 @@ function centerActualPixels() {
   );
 }
 
+function updateCaptionOverflow() {
+  if (!dialog.open || caption.hidden || caption.classList.contains('expanded')) return;
+  captionToggle.hidden = caption.scrollHeight <= caption.clientHeight + 1;
+}
+
+captionToggle.addEventListener('click', () => {
+  const expanded = caption.classList.toggle('expanded');
+  captionToggle.setAttribute('aria-expanded', String(expanded));
+  captionToggle.textContent = expanded ? '收起' : '展开';
+  caption.scrollTop = 0;
+});
+window.addEventListener('resize', updateCaptionOverflow);
+
 function showPhoto() {
   const photo = selection[position];
   if (!photo) return;
@@ -80,7 +96,13 @@ function showPhoto() {
   image.width = photo.width;
   image.height = photo.height;
   document.querySelector('#lightbox-title').textContent = photo.title;
-  document.querySelector('#lightbox-caption').textContent = photo.placeholder ? '布局示意插画 · 非摄影作品' : photo.caption || '';
+  caption.textContent = photo.placeholder ? '布局示意插画 · 非摄影作品' : photoCaption(photo);
+  caption.hidden = !caption.textContent;
+  caption.classList.remove('expanded');
+  captionToggle.hidden = true;
+  captionToggle.textContent = '展开';
+  captionToggle.setAttribute('aria-expanded', 'false');
+  requestAnimationFrame(updateCaptionOverflow);
   const metadata = photoMetadata(photo);
   captureCamera.textContent = metadata.camera;
   captureMedium.textContent = metadata.medium;

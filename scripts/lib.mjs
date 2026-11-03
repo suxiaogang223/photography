@@ -76,6 +76,7 @@ export function validateContent(site, collections) {
       validateCapture(photo.capture, photo.id);
       if (photoMedium(photo, collection) === 'film' && datePrecision(photo.capture?.date) === 'minute') throw new Error(`胶片日期不应包含时分：${photo.id}`);
       if (!photo.alt?.trim() || !photo.title?.trim()) throw new Error(`照片需要标题和替代文字：${photo.id}`);
+      if (photo.caption !== undefined && typeof photo.caption !== 'string') throw new Error(`照片文字必须是字符串：${photo.id}`);
       if (![photo.width, photo.height].every(value => Number.isInteger(value) && value > 0)) throw new Error(`照片尺寸无效：${photo.id}`);
       if (!Array.isArray(photo.variants) || !photo.variants.length) throw new Error(`照片需要图片版本：${photo.id}`);
       let previousWidth = 0;

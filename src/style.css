@@ -91,3 +91,18 @@ main{overflow:hidden}.intro{width:86%;max-width:1530px;margin:76px auto 56px;dis
 .print-dialog-actions button{flex:none;padding:12px 18px;border:1px solid #9b9b9b;font-size:12px;letter-spacing:.05em}
 .print-dialog-actions button:hover{background:#ededed;color:#141414}
 @media(max-width:700px){.print-dialog{max-width:calc(100vw - 20px);max-height:calc(100dvh - 20px);padding:16px}.print-preview{margin:18px 0}.print-preview img{max-height:62dvh}.print-dialog-actions{align-items:stretch;flex-direction:column;gap:12px}.print-dialog-actions button{width:100%}}
+
+/* Author-written text stays outside the photo; empty captions add no space. */
+.collection-photo figcaption{display:block}
+.collection-photo .photo-meta{display:block;font-size:11px;color:var(--muted)}
+.collection-photo .photo-caption{max-width:600px;margin:14px 0 0;font-family:var(--sans);font-size:13px;line-height:2;color:#bcbcbc;white-space:pre-line;overflow-wrap:anywhere}
+.lightbox-bottom #lightbox-caption{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;max-width:600px;margin:12px 0 0;font-family:var(--sans);font-size:13px;line-height:2;color:#d4d4d4;white-space:pre-line;overflow-wrap:anywhere}
+.lightbox-bottom #lightbox-caption.expanded{display:block;max-height:28dvh;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+#lightbox-caption-toggle{display:block;margin-top:7px;padding:3px 0;color:#a3a3a3;font-size:11px;border-bottom:1px solid #ffffff35}
+#lightbox-caption-toggle:hover{color:#ededed}
+#lightbox-caption[hidden],#lightbox-caption-toggle[hidden]{display:none}
+@media(max-width:700px){
+  .collection-photo .photo-meta{font-size:10px}
+  .collection-photo .photo-caption{margin-top:11px;font-size:12px;line-height:2}
+  .lightbox-bottom #lightbox-caption{max-width:none;font-size:12px;line-height:2}
+}
