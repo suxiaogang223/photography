@@ -95,7 +95,11 @@ test('published photos have complete dates at the precision appropriate to each 
   }
   const others = collections.find(collection => collection.kind === 'others');
   assert.equal(others.dateRange, undefined);
-  assert.ok(others.photos.every(photo => photo.capture.date === '2026-10' && photo.capture.dateSource === 'processing-month'));
+  const months = others.photos.map(photo => photo.capture.date);
+  assert.deepEqual(months, [...months].sort());
+  for (const photo of others.photos) {
+    assert.equal(photo.capture.dateSource, photoMedium(photo, others) === 'film' ? 'processing-month' : 'exif', photo.id);
+  }
   const zoo = collections.find(collection => collection.id === 'zoo');
   assert.ok(zoo.photos.slice(0, 18).every(photo => photoMetadata(photo).exposure === '50mm'));
   assert.deepEqual(zoo.photos.slice(-3).map(photo => photo.capture.date), ['2026-10-25T14:00', '2026-10-25T14:00', '2026-10-25T14:01']);
