@@ -5936,8 +5936,144 @@
         }
       },
       {
-        "id": "memory-fragments-9593c1477d815f2e",
+        "id": "memory-fragments-ab5c101a59fc226d",
         "title": "记忆碎片 · 14",
+        "alt": "隔着窗框望向暮色中的楼群",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-ab5c101a59fc226d-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-ab5c101a59fc226d-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-ab5c101a59fc226d-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/535 s",
+          "iso": "50",
+          "date": "2026-11-04T17:51",
+          "dateSource": "exif",
+          "filter": "FXN"
+        }
+      },
+      {
+        "id": "memory-fragments-148a2a71942e0398",
+        "title": "记忆碎片 · 15",
+        "alt": "室内的树干、木凳和后方亮着的窗",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-148a2a71942e0398-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-148a2a71942e0398-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-148a2a71942e0398-large.webp",
+            "width": 2000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/50 s",
+          "iso": "125",
+          "date": "2026-11-04T18:37",
+          "dateSource": "exif",
+          "filter": "FXN"
+        }
+      },
+      {
+        "id": "memory-fragments-ded59bc5d531285f",
+        "title": "记忆碎片 · 16",
+        "alt": "一只橘白猫蜷在黑色座垫上",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-ded59bc5d531285f-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-ded59bc5d531285f-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-ded59bc5d531285f-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/33 s",
+          "iso": "400",
+          "date": "2026-11-04T20:26",
+          "dateSource": "exif",
+          "filter": "FXN"
+        }
+      },
+      {
+        "id": "memory-fragments-1979cf90f3cbf7b7",
+        "title": "记忆碎片 · 17",
+        "alt": "街边斑驳的墙面与蓝色门牌",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-1979cf90f3cbf7b7-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-1979cf90f3cbf7b7-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-1979cf90f3cbf7b7-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/1420 s",
+          "iso": "50",
+          "date": "2026-11-06T10:34",
+          "dateSource": "exif",
+          "filter": "FXN"
+        }
+      },
+      {
+        "id": "memory-fragments-9593c1477d815f2e",
+        "title": "记忆碎片 · 18",
         "alt": "夜晚店铺门外，一位坐在雨棚下的人",
         "caption": "",
         "width": 2000,
@@ -5971,7 +6107,7 @@
       },
       {
         "id": "memory-fragments-bf0f8616408227c6",
-        "title": "记忆碎片 · 15",
+        "title": "记忆碎片 · 19",
         "alt": "夜里被锥桶和围栏圈出的道路施工区域",
         "caption": "",
         "width": 3000,
@@ -6005,7 +6141,7 @@
       },
       {
         "id": "memory-fragments-44a5ae22a9a9448b",
-        "title": "记忆碎片 · 16",
+        "title": "记忆碎片 · 20",
         "alt": "店里木桌上的红白招财猫",
         "caption": "",
         "width": 3000,
@@ -6035,7 +6171,7 @@
       },
       {
         "id": "memory-fragments-ee42e624cb6a8af6",
-        "title": "记忆碎片 · 17",
+        "title": "记忆碎片 · 21",
         "alt": "街边写着修电动车和自行车的手写招牌",
         "caption": "",
         "width": 3000,
@@ -6065,7 +6201,7 @@
       },
       {
         "id": "memory-fragments-c12ad24d4aea5ab1",
-        "title": "记忆碎片 · 18",
+        "title": "记忆碎片 · 22",
         "alt": "站在层层碗碟旁的店员背影",
         "caption": "",
         "width": 3000,
@@ -6095,7 +6231,7 @@
       },
       {
         "id": "memory-fragments-62194a3802a073b6",
-        "title": "记忆碎片 · 19",
+        "title": "记忆碎片 · 23",
         "alt": "黄昏的天光落在远处的城市楼群上",
         "caption": "",
         "width": 3000,
@@ -6125,7 +6261,7 @@
       },
       {
         "id": "memory-fragments-f55e62a5592d0eee",
-        "title": "记忆碎片 · 20",
+        "title": "记忆碎片 · 24",
         "alt": "门边木牌上的福字",
         "caption": "",
         "width": 3000,
@@ -6155,7 +6291,7 @@
       },
       {
         "id": "memory-fragments-6f5b0afde11b6d9a",
-        "title": "记忆碎片 · 21",
+        "title": "记忆碎片 · 25",
         "alt": "仰拍绿黄色灯光照亮的天花板和管线",
         "caption": "",
         "width": 3000,
@@ -6185,7 +6321,7 @@
       },
       {
         "id": "memory-fragments-bfba8eaafa05ec87",
-        "title": "记忆碎片 · 22",
+        "title": "记忆碎片 · 26",
         "alt": "夜晚道路上的车流和延伸向远处的路灯",
         "caption": "",
         "width": 3000,
@@ -6215,7 +6351,7 @@
       },
       {
         "id": "memory-fragments-0f65d8d683425250",
-        "title": "记忆碎片 · 23",
+        "title": "记忆碎片 · 27",
         "alt": "从高处俯看旧楼之间的小巷、摊位和行人",
         "caption": "",
         "width": 3000,
