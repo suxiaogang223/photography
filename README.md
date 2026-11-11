@@ -53,11 +53,13 @@ Cloudflare Web Analytics 的站点主机名应设置为 `suxiaogang223.github.io
 | --- | --- | --- |
 | 数码 | `2026-10-25T14:00` | `2026.10.25 14:00` |
 | 胶片 | `2026-10-01` | `2026.10.01` |
-| 记忆碎片 | `2026-10` | `2026.10` |
+| 记忆碎片中仅知冲洗月份的胶片 | `2026-10` | `2026.10` |
 
-`capture.dateSource` 记录日期来源：`exif` 为数码原始拍摄时间，`manual` 为拍摄者提供，`series` 为沿用已有系列日期，`processing-month` 为拍摄者指定使用的冲洗月份。记忆碎片按月排序，胶片使用冲洗月份，数码使用 EXIF 拍摄月份，系列本身不设置日期。发布构建会拒绝缺少日期／来源、无效日期，以及超出系列日期范围的照片。
+`capture.dateSource` 使用 `exif` 记录数码原始拍摄时间，`manual` 记录拍摄者提供的日期，`series` 沿用已有系列日期，`processing-month` 记录冲洗月份。发布构建会拒绝缺少日期／来源、无效日期，以及超出系列日期范围的照片。
 
-胶片的 `focalLength` 直接填写焦段，例如 `40mm` 或 `50mm`；现有照片不填写光圈和快门。[理光官方资料](https://www.ricoh-imaging.co.jp/japan/products/ricoh-filmcamera/cameralist/elnica35.html)确认 Elnica 35 使用 40mm 固定镜头；现有 Olympus OM-2N 照片按拍摄者提供的 50mm 记录。
+记忆碎片的系列本身不设置日期。数码照片保留 EXIF 拍摄时间到分钟，胶片有拍摄日就写到日，其余使用冲洗月份。按月份从早到晚排序，同月先按拍摄时间排有具体日期的照片，再放仅知月份的照片。同一排序位置的照片保留原有先后。
+
+胶片的 `focalLength` 直接填写焦段。Olympus OM-2N 的焦段按单张照片记录，例如 `50mm` 或 `200mm`。Elnica 35 使用 40mm 固定镜头。胶片的光圈和快门留空。[理光官方资料](https://www.ricoh-imaging.co.jp/japan/products/ricoh-filmcamera/cameralist/elnica35.html)
 
 ## 导入真实照片
 

@@ -5543,37 +5543,140 @@
     "cover": "memory-fragments-bfc87c40e0e47d63",
     "photos": [
       {
-        "id": "memory-fragments-3f829857d8b0735e",
+        "id": "memory-fragments-0ff13e625bf82c5a",
         "title": "记忆碎片 · 01",
-        "alt": "从高处俯瞰居民楼间的街道与树荫",
+        "alt": "白天从高处望向旧城区屋顶与远处的高楼",
         "caption": "",
         "width": 3000,
-        "height": 2011,
+        "height": 1851,
         "variants": [
           {
-            "src": "media/memory-fragments/memory-fragments-3f829857d8b0735e-thumb.webp",
+            "src": "media/memory-fragments/memory-fragments-0ff13e625bf82c5a-thumb.webp",
             "width": 640
           },
           {
-            "src": "media/memory-fragments/memory-fragments-3f829857d8b0735e-display.webp",
+            "src": "media/memory-fragments/memory-fragments-0ff13e625bf82c5a-display.webp",
             "width": 1600
           },
           {
-            "src": "media/memory-fragments/memory-fragments-3f829857d8b0735e-large.webp",
+            "src": "media/memory-fragments/memory-fragments-0ff13e625bf82c5a-large.webp",
             "width": 3000
           }
         ],
+        "medium": "digital",
         "capture": {
-          "camera": "Olympus OM-2N",
-          "film": "FUJICOLOR C200",
-          "focalLength": "50mm",
-          "date": "2026-10",
-          "dateSource": "processing-month"
+          "camera": "NIKON Z fc",
+          "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+          "focalLength": "36mm",
+          "aperture": "f/4.2",
+          "shutter": "1/4000 s",
+          "iso": "200",
+          "date": "2026-09-08T16:10",
+          "dateSource": "exif"
+        }
+      },
+      {
+        "id": "memory-fragments-d5fe824458eab6bd",
+        "title": "记忆碎片 · 02",
+        "alt": "阴云下的城市天际线与近处的居民楼",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-d5fe824458eab6bd-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-d5fe824458eab6bd-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-d5fe824458eab6bd-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+          "focalLength": "36mm",
+          "aperture": "f/4.2",
+          "shutter": "1/250 s",
+          "iso": "200",
+          "date": "2026-09-09T10:53",
+          "dateSource": "exif"
+        }
+      },
+      {
+        "id": "memory-fragments-156b7c83ebefa258",
+        "title": "记忆碎片 · 03",
+        "alt": "树荫掩映下停满车辆的小路",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-156b7c83ebefa258-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-156b7c83ebefa258-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-156b7c83ebefa258-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR",
+          "focalLength": "55mm",
+          "aperture": "f/5.3",
+          "shutter": "1/60 s",
+          "iso": "450",
+          "date": "2026-09-09T10:54",
+          "dateSource": "exif"
+        }
+      },
+      {
+        "id": "memory-fragments-1e51e61fd822e1ad",
+        "title": "记忆碎片 · 04",
+        "alt": "蓝色夜幕下亮起灯光的城市楼群",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-1e51e61fd822e1ad-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-1e51e61fd822e1ad-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-1e51e61fd822e1ad-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "NIKON Z fc",
+          "lens": "TTArtisan Z 23mm f/1.8 S",
+          "focalLength": "34mm",
+          "aperture": "f/1.8",
+          "shutter": "1/8 s",
+          "iso": "400",
+          "date": "2026-09-12T01:47",
+          "dateSource": "exif"
         }
       },
       {
         "id": "memory-fragments-ebb31c5cfa676a44",
-        "title": "记忆碎片 · 02",
+        "title": "记忆碎片 · 05",
         "alt": "黑白画面里，屋檐下的人影望向街对面",
         "caption": "",
         "width": 3000,
@@ -5601,37 +5704,8 @@
         }
       },
       {
-        "id": "memory-fragments-d0994e7964752722",
-        "title": "记忆碎片 · 03",
-        "alt": "晴天下从高处眺望密集的城市楼群",
-        "caption": "",
-        "width": 3000,
-        "height": 2011,
-        "variants": [
-          {
-            "src": "media/memory-fragments/memory-fragments-d0994e7964752722-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/memory-fragments/memory-fragments-d0994e7964752722-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/memory-fragments/memory-fragments-d0994e7964752722-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Olympus OM-2N",
-          "film": "FUJICOLOR C200",
-          "focalLength": "50mm",
-          "date": "2026-10",
-          "dateSource": "processing-month"
-        }
-      },
-      {
         "id": "memory-fragments-bfc87c40e0e47d63",
-        "title": "记忆碎片 · 04",
+        "title": "记忆碎片 · 06",
         "alt": "阳光落在桌面上的一台尼康相机",
         "caption": "",
         "width": 3000,
@@ -5660,7 +5734,7 @@
       },
       {
         "id": "memory-fragments-1d42af6841657924",
-        "title": "记忆碎片 · 05",
+        "title": "记忆碎片 · 07",
         "alt": "树荫覆盖的小公园与空荡的步道",
         "caption": "",
         "width": 3000,
@@ -5689,7 +5763,7 @@
       },
       {
         "id": "memory-fragments-111c0315a46383cf",
-        "title": "记忆碎片 · 06",
+        "title": "记忆碎片 · 08",
         "alt": "一名摄影者对着镜子举起相机",
         "caption": "",
         "width": 3000,
@@ -5718,7 +5792,7 @@
       },
       {
         "id": "memory-fragments-88b1ef80c76dd89f",
-        "title": "记忆碎片 · 07",
+        "title": "记忆碎片 · 09",
         "alt": "树荫下的骑手停在路边",
         "caption": "",
         "width": 3000,
@@ -5747,7 +5821,7 @@
       },
       {
         "id": "memory-fragments-295980f717f6825f",
-        "title": "记忆碎片 · 08",
+        "title": "记忆碎片 · 10",
         "alt": "黑白画面里写着福字的门牌与玻璃反光",
         "caption": "",
         "width": 3000,
@@ -5776,7 +5850,7 @@
       },
       {
         "id": "memory-fragments-256e49695b7adc16",
-        "title": "记忆碎片 · 09",
+        "title": "记忆碎片 · 11",
         "alt": "街边摊位前聚集的人群",
         "caption": "",
         "width": 3000,
@@ -5805,7 +5879,7 @@
       },
       {
         "id": "memory-fragments-6ccb6b977336169d",
-        "title": "记忆碎片 · 10",
+        "title": "记忆碎片 · 12",
         "alt": "从高处望向层层楼房与远处高楼",
         "caption": "",
         "width": 3000,
@@ -5834,7 +5908,7 @@
       },
       {
         "id": "memory-fragments-d01b7e10dbcc6240",
-        "title": "记忆碎片 · 11",
+        "title": "记忆碎片 · 13",
         "alt": "花圃里白色花团与粉色小花",
         "caption": "",
         "width": 3000,
@@ -5862,8 +5936,76 @@
         }
       },
       {
+        "id": "memory-fragments-9593c1477d815f2e",
+        "title": "记忆碎片 · 14",
+        "alt": "夜晚店铺门外，一位坐在雨棚下的人",
+        "caption": "",
+        "width": 2000,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-9593c1477d815f2e-thumb.webp",
+            "width": 427
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-9593c1477d815f2e-display.webp",
+            "width": 1067
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-9593c1477d815f2e-large.webp",
+            "width": 2000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/50 s",
+          "iso": "320",
+          "date": "2026-11-10T22:00",
+          "dateSource": "exif",
+          "filter": "FXN"
+        }
+      },
+      {
+        "id": "memory-fragments-bf0f8616408227c6",
+        "title": "记忆碎片 · 15",
+        "alt": "夜里被锥桶和围栏圈出的道路施工区域",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/memory-fragments/memory-fragments-bf0f8616408227c6-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-bf0f8616408227c6-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/memory-fragments/memory-fragments-bf0f8616408227c6-large.webp",
+            "width": 3000
+          }
+        ],
+        "medium": "digital",
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/50 s",
+          "iso": "400",
+          "date": "2026-11-11T00:57",
+          "dateSource": "exif",
+          "filter": "FXN"
+        }
+      },
+      {
         "id": "memory-fragments-44a5ae22a9a9448b",
-        "title": "记忆碎片 · 12",
+        "title": "记忆碎片 · 16",
         "alt": "店里木桌上的红白招财猫",
         "caption": "",
         "width": 3000,
@@ -5893,7 +6035,7 @@
       },
       {
         "id": "memory-fragments-ee42e624cb6a8af6",
-        "title": "记忆碎片 · 13",
+        "title": "记忆碎片 · 17",
         "alt": "街边写着修电动车和自行车的手写招牌",
         "caption": "",
         "width": 3000,
@@ -5923,7 +6065,7 @@
       },
       {
         "id": "memory-fragments-c12ad24d4aea5ab1",
-        "title": "记忆碎片 · 14",
+        "title": "记忆碎片 · 18",
         "alt": "站在层层碗碟旁的店员背影",
         "caption": "",
         "width": 3000,
@@ -5953,7 +6095,7 @@
       },
       {
         "id": "memory-fragments-62194a3802a073b6",
-        "title": "记忆碎片 · 15",
+        "title": "记忆碎片 · 19",
         "alt": "黄昏的天光落在远处的城市楼群上",
         "caption": "",
         "width": 3000,
@@ -5983,7 +6125,7 @@
       },
       {
         "id": "memory-fragments-f55e62a5592d0eee",
-        "title": "记忆碎片 · 16",
+        "title": "记忆碎片 · 20",
         "alt": "门边木牌上的福字",
         "caption": "",
         "width": 3000,
@@ -6013,7 +6155,7 @@
       },
       {
         "id": "memory-fragments-6f5b0afde11b6d9a",
-        "title": "记忆碎片 · 17",
+        "title": "记忆碎片 · 21",
         "alt": "仰拍绿黄色灯光照亮的天花板和管线",
         "caption": "",
         "width": 3000,
@@ -6043,7 +6185,7 @@
       },
       {
         "id": "memory-fragments-bfba8eaafa05ec87",
-        "title": "记忆碎片 · 18",
+        "title": "记忆碎片 · 22",
         "alt": "夜晚道路上的车流和延伸向远处的路灯",
         "caption": "",
         "width": 3000,
@@ -6072,71 +6214,33 @@
         }
       },
       {
-        "id": "memory-fragments-9593c1477d815f2e",
-        "title": "记忆碎片 · 19",
-        "alt": "夜晚店铺门外，一位坐在雨棚下的人",
-        "caption": "",
-        "width": 2000,
-        "height": 3000,
-        "variants": [
-          {
-            "src": "media/memory-fragments/memory-fragments-9593c1477d815f2e-thumb.webp",
-            "width": 427
-          },
-          {
-            "src": "media/memory-fragments/memory-fragments-9593c1477d815f2e-display.webp",
-            "width": 1067
-          },
-          {
-            "src": "media/memory-fragments/memory-fragments-9593c1477d815f2e-large.webp",
-            "width": 2000
-          }
-        ],
-        "medium": "digital",
-        "capture": {
-          "camera": "Dazz Cam",
-          "lens": "iPhone 17 back camera 5.96mm f/1.6",
-          "focalLength": "35mm",
-          "aperture": "f/1.6",
-          "shutter": "1/50 s",
-          "iso": "320",
-          "date": "2026-11",
-          "dateSource": "exif",
-          "filter": "FXN"
-        }
-      },
-      {
-        "id": "memory-fragments-bf0f8616408227c6",
-        "title": "记忆碎片 · 20",
-        "alt": "夜里被锥桶和围栏圈出的道路施工区域",
+        "id": "memory-fragments-0f65d8d683425250",
+        "title": "记忆碎片 · 23",
+        "alt": "从高处俯看旧楼之间的小巷、摊位和行人",
         "caption": "",
         "width": 3000,
-        "height": 2000,
+        "height": 2002,
         "variants": [
           {
-            "src": "media/memory-fragments/memory-fragments-bf0f8616408227c6-thumb.webp",
+            "src": "media/memory-fragments/memory-fragments-0f65d8d683425250-thumb.webp",
             "width": 640
           },
           {
-            "src": "media/memory-fragments/memory-fragments-bf0f8616408227c6-display.webp",
+            "src": "media/memory-fragments/memory-fragments-0f65d8d683425250-display.webp",
             "width": 1600
           },
           {
-            "src": "media/memory-fragments/memory-fragments-bf0f8616408227c6-large.webp",
+            "src": "media/memory-fragments/memory-fragments-0f65d8d683425250-large.webp",
             "width": 3000
           }
         ],
-        "medium": "digital",
+        "medium": "film",
         "capture": {
-          "camera": "Dazz Cam",
-          "lens": "iPhone 17 back camera 5.96mm f/1.6",
-          "focalLength": "35mm",
-          "aperture": "f/1.6",
-          "shutter": "1/50 s",
-          "iso": "400",
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "200mm",
           "date": "2026-11",
-          "dateSource": "exif",
-          "filter": "FXN"
+          "dateSource": "processing-month"
         }
       }
     ]

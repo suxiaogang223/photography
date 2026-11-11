@@ -77,9 +77,11 @@ test('published photos have complete dates at the precision appropriate to each 
   for (const collection of collections) {
     for (const photo of collection.photos) {
       const precision = datePrecision(photo.capture.date);
+      const isFilm = photoMedium(photo, collection) === 'film';
+      const processingMonth = isFilm && collection.kind === 'others' && photo.capture.dateSource === 'processing-month';
       assert.ok(precision, photo.id);
-      assert.equal(precision, collection.kind === 'others' ? 'month' : photoMedium(photo, collection) === 'film' ? 'day' : 'minute', photo.id);
-      if (photoMedium(photo, collection) === 'film') {
+      assert.equal(precision, processingMonth ? 'month' : isFilm ? 'day' : 'minute', photo.id);
+      if (isFilm) {
         assert.match(photo.capture.focalLength, /^\d+mm$/);
         assert.equal(photo.capture.aperture, undefined);
         assert.equal(photo.capture.shutter, undefined);
@@ -95,10 +97,13 @@ test('published photos have complete dates at the precision appropriate to each 
   }
   const others = collections.find(collection => collection.kind === 'others');
   assert.equal(others.dateRange, undefined);
-  const months = others.photos.map(photo => photo.capture.date);
-  assert.deepEqual(months, [...months].sort());
+  const chronologicalKeys = others.photos.map(({ capture: { date } }) => {
+    const monthOnly = datePrecision(date) === 'month' ? 1 : 0;
+    return `${date.slice(0, 7)}/${monthOnly}/${date}`;
+  });
+  assert.deepEqual(chronologicalKeys, [...chronologicalKeys].sort());
   for (const photo of others.photos) {
-    assert.equal(photo.capture.dateSource, photoMedium(photo, others) === 'film' ? 'processing-month' : 'exif', photo.id);
+    if (photoMedium(photo, others) === 'digital') assert.equal(photo.capture.dateSource, 'exif', photo.id);
   }
   const zoo = collections.find(collection => collection.id === 'zoo');
   assert.ok(zoo.photos.slice(0, 18).every(photo => photoMetadata(photo).exposure === '50mm'));
