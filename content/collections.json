@@ -9534,6 +9534,35 @@
           "filter": "GRD"
         },
         "medium": "digital"
+      },
+      {
+        "id": "donghu-park-e1cb949b36a2a9ea",
+        "title": "东湖公园 · 24",
+        "alt": "蓝天下的红黄色球形装饰与树木",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
       }
     ],
     "category": "胶片纪行",
@@ -9541,8 +9570,8 @@
       "start": "2026-11-21",
       "end": "2026-11-21",
       "source": "拍摄者确认，Dazz 照片 EXIF DateTimeOriginal",
-      "datedPhotos": 23,
-      "totalPhotos": 23
+      "datedPhotos": 24,
+      "totalPhotos": 24
     }
   }
 ]
