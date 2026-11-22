@@ -8838,5 +8838,711 @@
       "datedPhotos": 27,
       "totalPhotos": 27
     }
+  },
+  {
+    "id": "donghu-park",
+    "title": "东湖公园",
+    "subtitle": "DONGHU PARK",
+    "year": "",
+    "medium": "film",
+    "description": "带着 Olympus OM-2N 和柯达全能 400，在东湖公园尝试用 135mm 长焦镜头拍摄胶片。另有四张使用 Dazz Cam 的 GRD、FXN 滤镜拍摄。",
+    "cover": "donghu-park-3f8e626c6a8576cf",
+    "photos": [
+      {
+        "id": "donghu-park-44e5e99e94202396",
+        "title": "东湖公园 · 01",
+        "alt": "蓝色墙前停着一辆红色三轮车",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-44e5e99e94202396-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-44e5e99e94202396-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-44e5e99e94202396-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-09700495a863baae",
+        "title": "东湖公园 · 02",
+        "alt": "树木与楼房间的一座水塔",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-09700495a863baae-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-09700495a863baae-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-09700495a863baae-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-29bcd58a3577c7b4",
+        "title": "东湖公园 · 03",
+        "alt": "围网里的篮球场和打球的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2010,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-29bcd58a3577c7b4-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-29bcd58a3577c7b4-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-29bcd58a3577c7b4-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-5d5bc00c6271ae0b",
+        "title": "东湖公园 · 04",
+        "alt": "游乐场滑梯旁的大人和孩子",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-5d5bc00c6271ae0b-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-5d5bc00c6271ae0b-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-5d5bc00c6271ae0b-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-30a56a86d69e0740",
+        "title": "东湖公园 · 05",
+        "alt": "草地边的气球摊和散步的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-30a56a86d69e0740-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-30a56a86d69e0740-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-30a56a86d69e0740-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-8e93bd462418593d",
+        "title": "东湖公园 · 06",
+        "alt": "街边树木与驶过的货车",
+        "caption": "",
+        "width": 3000,
+        "height": 2010,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-8e93bd462418593d-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-8e93bd462418593d-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-8e93bd462418593d-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-f1fd5e3d88aa91d9",
+        "title": "东湖公园 · 07",
+        "alt": "蓝天下高架桥后的白色楼房",
+        "caption": "",
+        "width": 3000,
+        "height": 2010,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-f1fd5e3d88aa91d9-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-f1fd5e3d88aa91d9-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-f1fd5e3d88aa91d9-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-788a7325673c889f",
+        "title": "东湖公园 · 08",
+        "alt": "高架桥下排队通行的车辆",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-788a7325673c889f-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-788a7325673c889f-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-788a7325673c889f-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-ecd7f122ddfddd67",
+        "title": "东湖公园 · 09",
+        "alt": "公园树荫下站在路边的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-ecd7f122ddfddd67-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-ecd7f122ddfddd67-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-ecd7f122ddfddd67-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-005c3c9747d31754",
+        "title": "东湖公园 · 10",
+        "alt": "草地旁活动的人群与气球",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-005c3c9747d31754-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-005c3c9747d31754-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-005c3c9747d31754-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-3d1ada9cf0ef77de",
+        "title": "东湖公园 · 11",
+        "alt": "湖边弯腰的大人与身旁的孩子",
+        "caption": "",
+        "width": 2011,
+        "height": 3000,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-3d1ada9cf0ef77de-thumb.webp",
+            "width": 429
+          },
+          {
+            "src": "media/donghu-park/donghu-park-3d1ada9cf0ef77de-display.webp",
+            "width": 1072
+          },
+          {
+            "src": "media/donghu-park/donghu-park-3d1ada9cf0ef77de-large.webp",
+            "width": 2011
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-7fb1d7b74c1cf1d2",
+        "title": "东湖公园 · 12",
+        "alt": "蓝色天空里升起的气球",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-7fb1d7b74c1cf1d2-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-7fb1d7b74c1cf1d2-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-7fb1d7b74c1cf1d2-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-46cc53014aa35084",
+        "title": "东湖公园 · 13",
+        "alt": "高架桥边的交通指示牌",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-46cc53014aa35084-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-46cc53014aa35084-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-46cc53014aa35084-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-3f8e626c6a8576cf",
+        "title": "东湖公园 · 14",
+        "alt": "蓝天下彩色球形装饰",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-3f8e626c6a8576cf-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-3f8e626c6a8576cf-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-3f8e626c6a8576cf-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-096af3a25694250a",
+        "title": "东湖公园 · 15",
+        "alt": "草地上躺着休息的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-096af3a25694250a-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-096af3a25694250a-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-096af3a25694250a-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-e1f921381bac033d",
+        "title": "东湖公园 · 16",
+        "alt": "高架桥侧面的藤蔓与路灯",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-e1f921381bac033d-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-e1f921381bac033d-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-e1f921381bac033d-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-6f51b3cefe838ffd",
+        "title": "东湖公园 · 17",
+        "alt": "树林前空地上走动的小狗",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-6f51b3cefe838ffd-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-6f51b3cefe838ffd-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-6f51b3cefe838ffd-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-3f58b5febde4c3f9",
+        "title": "东湖公园 · 18",
+        "alt": "树木后方的新旧楼房",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-3f58b5febde4c3f9-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-3f58b5febde4c3f9-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-3f58b5febde4c3f9-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-13144bb1b1f50620",
+        "title": "东湖公园 · 19",
+        "alt": "藤蔓覆盖的高架桥下穿行的人与车辆",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-13144bb1b1f50620-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-13144bb1b1f50620-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-13144bb1b1f50620-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-2863a466ae43e445",
+        "title": "东湖公园 · 20",
+        "alt": "水池边骑自行车的人与湖边树木",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-2863a466ae43e445-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-2863a466ae43e445-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-2863a466ae43e445-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "26mm",
+          "aperture": "f/1.6",
+          "shutter": "1/274 s",
+          "iso": "50",
+          "date": "2026-11-21T14:37",
+          "dateSource": "exif",
+          "filter": "GRD"
+        },
+        "medium": "digital"
+      },
+      {
+        "id": "donghu-park-b4cfd27f10fce564",
+        "title": "东湖公园 · 21",
+        "alt": "水池后方步道上走过的人",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-b4cfd27f10fce564-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-b4cfd27f10fce564-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-b4cfd27f10fce564-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/629 s",
+          "iso": "50",
+          "date": "2026-11-21T14:37",
+          "dateSource": "exif",
+          "filter": "FXN"
+        },
+        "medium": "digital"
+      },
+      {
+        "id": "donghu-park-7075c237ecefeee8",
+        "title": "东湖公园 · 22",
+        "alt": "树影覆盖的石块与地面落叶",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-7075c237ecefeee8-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-7075c237ecefeee8-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-7075c237ecefeee8-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "35mm",
+          "aperture": "f/1.6",
+          "shutter": "1/441 s",
+          "iso": "50",
+          "date": "2026-11-21T14:38",
+          "dateSource": "exif",
+          "filter": "FXN"
+        },
+        "medium": "digital"
+      },
+      {
+        "id": "donghu-park-5d8274bef7ea1f19",
+        "title": "东湖公园 · 23",
+        "alt": "白墙前的黄色自行车与盆栽",
+        "caption": "",
+        "width": 3000,
+        "height": 2000,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-5d8274bef7ea1f19-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-5d8274bef7ea1f19-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-5d8274bef7ea1f19-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Dazz Cam",
+          "lens": "iPhone 17 back camera 5.96mm f/1.6",
+          "focalLength": "26mm",
+          "aperture": "f/1.6",
+          "shutter": "1/535 s",
+          "iso": "50",
+          "date": "2026-11-21T14:48",
+          "dateSource": "exif",
+          "filter": "GRD"
+        },
+        "medium": "digital"
+      }
+    ],
+    "category": "胶片纪行",
+    "dateRange": {
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "source": "拍摄者确认，Dazz 照片 EXIF DateTimeOriginal",
+      "datedPhotos": 23,
+      "totalPhotos": 23
+    }
   }
 ]
