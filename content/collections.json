@@ -8849,37 +8849,8 @@
     "cover": "donghu-park-3f8e626c6a8576cf",
     "photos": [
       {
-        "id": "donghu-park-44e5e99e94202396",
-        "title": "东湖公园 · 01",
-        "alt": "蓝色墙前停着一辆红色三轮车",
-        "caption": "",
-        "width": 3000,
-        "height": 2011,
-        "variants": [
-          {
-            "src": "media/donghu-park/donghu-park-44e5e99e94202396-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/donghu-park/donghu-park-44e5e99e94202396-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/donghu-park/donghu-park-44e5e99e94202396-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Olympus OM-2N",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "135mm",
-          "date": "2026-11-21",
-          "dateSource": "manual"
-        }
-      },
-      {
         "id": "donghu-park-09700495a863baae",
-        "title": "东湖公园 · 02",
+        "title": "东湖公园 · 01",
         "alt": "树木与楼房间的一座水塔",
         "caption": "",
         "width": 3000,
@@ -8908,7 +8879,7 @@
       },
       {
         "id": "donghu-park-29bcd58a3577c7b4",
-        "title": "东湖公园 · 03",
+        "title": "东湖公园 · 02",
         "alt": "围网里的篮球场和打球的人",
         "caption": "",
         "width": 3000,
@@ -8937,7 +8908,7 @@
       },
       {
         "id": "donghu-park-5d5bc00c6271ae0b",
-        "title": "东湖公园 · 04",
+        "title": "东湖公园 · 03",
         "alt": "游乐场滑梯旁的大人和孩子",
         "caption": "",
         "width": 3000,
@@ -8966,7 +8937,7 @@
       },
       {
         "id": "donghu-park-30a56a86d69e0740",
-        "title": "东湖公园 · 05",
+        "title": "东湖公园 · 04",
         "alt": "草地边的气球摊和散步的人",
         "caption": "",
         "width": 3000,
@@ -8995,7 +8966,7 @@
       },
       {
         "id": "donghu-park-8e93bd462418593d",
-        "title": "东湖公园 · 06",
+        "title": "东湖公园 · 05",
         "alt": "街边树木与驶过的货车",
         "caption": "",
         "width": 3000,
@@ -9024,7 +8995,7 @@
       },
       {
         "id": "donghu-park-f1fd5e3d88aa91d9",
-        "title": "东湖公园 · 07",
+        "title": "东湖公园 · 06",
         "alt": "蓝天下高架桥后的白色楼房",
         "caption": "",
         "width": 3000,
@@ -9053,7 +9024,7 @@
       },
       {
         "id": "donghu-park-788a7325673c889f",
-        "title": "东湖公园 · 08",
+        "title": "东湖公园 · 07",
         "alt": "高架桥下排队通行的车辆",
         "caption": "",
         "width": 3000,
@@ -9082,7 +9053,7 @@
       },
       {
         "id": "donghu-park-ecd7f122ddfddd67",
-        "title": "东湖公园 · 09",
+        "title": "东湖公园 · 08",
         "alt": "公园树荫下站在路边的人",
         "caption": "",
         "width": 3000,
@@ -9111,7 +9082,7 @@
       },
       {
         "id": "donghu-park-005c3c9747d31754",
-        "title": "东湖公园 · 10",
+        "title": "东湖公园 · 09",
         "alt": "草地旁活动的人群与气球",
         "caption": "",
         "width": 3000,
@@ -9140,7 +9111,7 @@
       },
       {
         "id": "donghu-park-3d1ada9cf0ef77de",
-        "title": "东湖公园 · 11",
+        "title": "东湖公园 · 10",
         "alt": "湖边弯腰的大人与身旁的孩子",
         "caption": "",
         "width": 2011,
@@ -9169,7 +9140,7 @@
       },
       {
         "id": "donghu-park-7fb1d7b74c1cf1d2",
-        "title": "东湖公园 · 12",
+        "title": "东湖公园 · 11",
         "alt": "蓝色天空里升起的气球",
         "caption": "",
         "width": 3000,
@@ -9198,7 +9169,7 @@
       },
       {
         "id": "donghu-park-46cc53014aa35084",
-        "title": "东湖公园 · 13",
+        "title": "东湖公园 · 12",
         "alt": "高架桥边的交通指示牌",
         "caption": "",
         "width": 3000,
@@ -9227,7 +9198,7 @@
       },
       {
         "id": "donghu-park-3f8e626c6a8576cf",
-        "title": "东湖公园 · 14",
+        "title": "东湖公园 · 13",
         "alt": "蓝天下彩色球形装饰",
         "caption": "",
         "width": 3000,
@@ -9256,7 +9227,7 @@
       },
       {
         "id": "donghu-park-096af3a25694250a",
-        "title": "东湖公园 · 15",
+        "title": "东湖公园 · 14",
         "alt": "草地上躺着休息的人",
         "caption": "",
         "width": 3000,
@@ -9285,7 +9256,7 @@
       },
       {
         "id": "donghu-park-e1f921381bac033d",
-        "title": "东湖公园 · 16",
+        "title": "东湖公园 · 15",
         "alt": "高架桥侧面的藤蔓与路灯",
         "caption": "",
         "width": 3000,
@@ -9314,7 +9285,7 @@
       },
       {
         "id": "donghu-park-6f51b3cefe838ffd",
-        "title": "东湖公园 · 17",
+        "title": "东湖公园 · 16",
         "alt": "树林前空地上走动的小狗",
         "caption": "",
         "width": 3000,
@@ -9343,7 +9314,7 @@
       },
       {
         "id": "donghu-park-3f58b5febde4c3f9",
-        "title": "东湖公园 · 18",
+        "title": "东湖公园 · 17",
         "alt": "树木后方的新旧楼房",
         "caption": "",
         "width": 3000,
@@ -9372,7 +9343,7 @@
       },
       {
         "id": "donghu-park-13144bb1b1f50620",
-        "title": "东湖公园 · 19",
+        "title": "东湖公园 · 18",
         "alt": "藤蔓覆盖的高架桥下穿行的人与车辆",
         "caption": "",
         "width": 3000,
@@ -9388,6 +9359,35 @@
           },
           {
             "src": "media/donghu-park/donghu-park-13144bb1b1f50620-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-44e5e99e94202396",
+        "title": "东湖公园 · 19",
+        "alt": "蓝色墙前停着一辆红色三轮车",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-44e5e99e94202396-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-44e5e99e94202396-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-44e5e99e94202396-large.webp",
             "width": 3000
           }
         ],
