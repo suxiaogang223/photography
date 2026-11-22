@@ -9400,8 +9400,37 @@
         }
       },
       {
-        "id": "donghu-park-2863a466ae43e445",
+        "id": "donghu-park-e1cb949b36a2a9ea",
         "title": "东湖公园 · 20",
+        "alt": "蓝天下的红黄色球形装饰与树木",
+        "caption": "",
+        "width": 3000,
+        "height": 2011,
+        "variants": [
+          {
+            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-thumb.webp",
+            "width": 640
+          },
+          {
+            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-display.webp",
+            "width": 1600
+          },
+          {
+            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-large.webp",
+            "width": 3000
+          }
+        ],
+        "capture": {
+          "camera": "Olympus OM-2N",
+          "film": "Kodak UltraMax 400",
+          "focalLength": "135mm",
+          "date": "2026-11-21",
+          "dateSource": "manual"
+        }
+      },
+      {
+        "id": "donghu-park-2863a466ae43e445",
+        "title": "东湖公园 · 21",
         "alt": "水池边骑自行车的人与湖边树木",
         "caption": "",
         "width": 3000,
@@ -9435,7 +9464,7 @@
       },
       {
         "id": "donghu-park-b4cfd27f10fce564",
-        "title": "东湖公园 · 21",
+        "title": "东湖公园 · 22",
         "alt": "水池后方步道上走过的人",
         "caption": "",
         "width": 3000,
@@ -9469,7 +9498,7 @@
       },
       {
         "id": "donghu-park-7075c237ecefeee8",
-        "title": "东湖公园 · 22",
+        "title": "东湖公园 · 23",
         "alt": "树影覆盖的石块与地面落叶",
         "caption": "",
         "width": 3000,
@@ -9503,7 +9532,7 @@
       },
       {
         "id": "donghu-park-5d8274bef7ea1f19",
-        "title": "东湖公园 · 23",
+        "title": "东湖公园 · 24",
         "alt": "白墙前的黄色自行车与盆栽",
         "caption": "",
         "width": 3000,
@@ -9534,35 +9563,6 @@
           "filter": "GRD"
         },
         "medium": "digital"
-      },
-      {
-        "id": "donghu-park-e1cb949b36a2a9ea",
-        "title": "东湖公园 · 24",
-        "alt": "蓝天下的红黄色球形装饰与树木",
-        "caption": "",
-        "width": 3000,
-        "height": 2011,
-        "variants": [
-          {
-            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-thumb.webp",
-            "width": 640
-          },
-          {
-            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-display.webp",
-            "width": 1600
-          },
-          {
-            "src": "media/donghu-park/donghu-park-e1cb949b36a2a9ea-large.webp",
-            "width": 3000
-          }
-        ],
-        "capture": {
-          "camera": "Olympus OM-2N",
-          "film": "Kodak UltraMax 400",
-          "focalLength": "135mm",
-          "date": "2026-11-21",
-          "dateSource": "manual"
-        }
       }
     ],
     "category": "胶片纪行",
